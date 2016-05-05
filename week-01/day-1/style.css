@@ -4,7 +4,6 @@ body {
   font-size: 20px;
 }
 
-
 a {
   font-weight: bold;
   text-decoration: underline;
@@ -15,7 +14,6 @@ a {
 .question {
   font-weight: bold;
 }
-
 
 article {
   font-style: italic;
@@ -61,10 +59,10 @@ div {
 
 }
 
-.image_div {
+.image-div {
   width: 100%;
 }
 
-.image_big {
+.image-big {
   width: 100%;
 }
