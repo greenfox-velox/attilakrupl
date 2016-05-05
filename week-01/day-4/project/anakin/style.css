@@ -1,0 +1,53 @@
+.header {
+  height: 402px;
+  width: 1275px;
+  margin: -40px auto 0px auto;
+  background-position: center;
+  background-size: contain;
+  background-image: url("anakin.png");
+  font-family: georgia;
+}
+
+.header-hello {
+  padding: 250px 0px 0px 290px;
+  font-size: 35px;
+  font-family: "Abril Fatface", cursive;
+  color: #222;
+  font-weight: 300;
+}
+
+.header-name {
+  font-family: "Abril Fatface", cursive;
+  color: #222;
+  padding: 0px 0px 50px 290px;
+  margin-top: -50px;
+  font-size: 70px;
+  font-weight: 300;
+}
+
+.cv-text {
+  width: 700px;
+  margin: 80px auto 0 auto;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 21px;
+}
+
+.quotation {
+  font-family: "Abril Fatface", cursive;
+  color: white;
+  font-size: 25px;
+  width: 800px;
+  height: 150px;
+  background-color: rgb(68, 68, 68);
+  margin: 80px auto 0 auto;
+  text-align: center;
+  background-image: url("quo.jpg");
+  background-position: left top;
+  background-repeat: no-repeat;
+  background-size: 60px;
+}
+
+.quotation-text {
+  padding-top: 60px;
+  font-weight: 300;
+}
