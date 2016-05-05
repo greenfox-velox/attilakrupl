@@ -1,0 +1,13 @@
+h1, h2 {
+  color: green;
+}
+
+.capital {
+  color: red;
+  background-color: white;
+}
+
+.set {
+  font-style: italic;
+  color: blue;
+}
