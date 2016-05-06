@@ -56,3 +56,12 @@ blockquote {
   padding-left: 35px;
   text-align: left;
 }
+
+#div-border {
+  border-bottom: 4px solid black;
+  font-weight: 400;
+}
+
+h5 {
+  margin-top: -25px;
+}
