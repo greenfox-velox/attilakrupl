@@ -2,7 +2,7 @@ body {
   font-family: "Josefin Sans", sans-serif;
 }
 
-.header {
+header {
   height: 402px;
   width: 1275px;
   margin: -40px auto 0px auto;
@@ -11,21 +11,21 @@ body {
   background-image: url("anakin.png");
 }
 
-.header-hello {
-  padding: 250px 0px 0px 290px;
-  font-size: 35px;
+.header {
   font-family: "Abril Fatface", cursive;
   color: #222;
   font-weight: 300;
 }
 
-.header-name {
-  font-family: "Abril Fatface", cursive;
-  color: #222;
+.hello {
+  padding: 250px 0px 0px 290px;
+  font-size: 35px;
+}
+
+.name {
   padding: 0px 0px 50px 290px;
   margin-top: -50px;
   font-size: 70px;
-  font-weight: 300;
 }
 
 .cv-text {
@@ -36,32 +36,34 @@ body {
 
 blockquote {
   font-family: "Abril Fatface", cursive;
+  font-size: 50px;
+  font-weight: 300;
   color: white;
-  font-size: 25px;
-  max-width: 800px;
+  text-align: left center;
+  width: 780px;
   height: auto;
-  padding-bottom: 30px;
-  background-color: rgb(68, 68, 68);
+  padding: 50px 0px 50px 40px;
   margin: 80px auto 0 auto;
-  text-align: center;
+  background-color: rgb(68, 68, 68);
   background-image: url("quo.jpg");
   background-position: left top;
   background-repeat: no-repeat;
   background-size: 60px;
-}
+  }
 
-.quotation-text {
-  padding-top: 60px;
-  font-weight: 300;
-  padding-left: 35px;
-  text-align: left;
-}
-
-#div-border {
+.div-border {
   border-bottom: 4px solid black;
   font-weight: 400;
 }
 
 h5 {
   margin-top: -25px;
+}
+
+.smaller p, .smaller li {
+  font-size: 17px;
+}
+
+li {
+  list-style-type: square;
 }
