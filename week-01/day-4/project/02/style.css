@@ -19,6 +19,6 @@ div {
   border-color: white;
 }
 
-.container#bottom {
+#bottom {
   border-width: 0px 50px 10px 50px;
 }

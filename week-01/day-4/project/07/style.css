@@ -6,10 +6,10 @@ div {
   font-size: 18px;
 }
 
-.first-div {
+.upper {
   border-top: white;
 }
 
-.last-div {
+.bottom {
   border-bottom: white;
 }
