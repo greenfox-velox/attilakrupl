@@ -1,0 +1,19 @@
+h1 {
+  color: blue;
+}
+
+h2 {
+  color: orange;
+}
+
+ul ul li {
+  list-style-type: disc;
+}
+
+.the-red-one {
+  color: red;
+}
+
+.the-blue-ones {
+  color: blue;
+}

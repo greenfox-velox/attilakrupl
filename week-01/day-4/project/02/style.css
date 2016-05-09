@@ -1,0 +1,24 @@
+div {
+  background-color: yellow;
+  color: blue;
+  width: 225px;
+  height: 30px;
+  font-size: 30px;
+  padding: 20px 0px 20px 25px;
+  border: black solid 5px;
+}
+
+.container {
+  width: 260px;
+  height: 240px;
+  background-color: green;
+  border: none;
+  padding: 20px 20px 20px 20px;
+  border-width: 35px 50px 10px 50px;
+  border-style: solid;
+  border-color: white;
+}
+
+.container#bottom {
+  border-width: 0px 50px 10px 50px;
+}
