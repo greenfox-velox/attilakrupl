@@ -1,56 +1,45 @@
-.mutter {
+body {
   width: 100%;
-  height: 670px;
-  margin: 0 auto;
+  margin: auto;
+}
+
+header {
+  height: 100px;
+  background-color: #00FFFF;
+}
+
+.container {
+  height: 500px;
   display: flex;
-  flex-wrap: wrap;
+}
+
+nav {
+  width: 100px;
+  background-color: orange;
+}
+
+main {
+  margin: 0 20px;
+  width: 100%;
+  background-color: red;
   position: relative;
 }
 
-.one {
-  width: 100%;
-  height: 100px;
-  background-color: #00E6FF;
-  position: fixed;
-  margin: 0 auto;
-
-}
-
-.box {
-  height: 600px;
-  min-width: 100px;
-}
-
-.two {
-  background-color: #FEA500;
-  flex-grow: 1;
-}
-
-.three {
-  background-color: #FE0000;
-  flex-grow: 22;
-  margin: 0 15px 0 15px;
-}
-
-.four {
-  background-color: #81007F;
-  flex-grow: 1;
-}
-
-.five {
-  background-color: #0000FE;
-  position: fixed;
-  width: 540px;
-  height: 100px;
-  margin-top: 600px;
-  margin-left: -540px;
-}
-
-.six {
+.black {
   width: 50px;
   height: 50px;
   background-color: black;
   position: absolute;
-  margin-top: 530px;
-  margin-left: -195px;
+  bottom: 20px;
+  right: 20px;
+}
+
+aside {
+  width: 100px;
+  background-color: #81007F;
+}
+
+footer {
+  height: 100px;
+  background-color: blue;
 }
