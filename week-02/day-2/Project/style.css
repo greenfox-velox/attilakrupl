@@ -1,0 +1,45 @@
+.cont {
+    border: dashed white 2px;
+    width: 500px;
+    position: absolute;
+    left: 155px;
+}
+
+main {
+    height: 1000px;
+    width: 820px;
+    background-color: #DCD6CD;
+    margin: 0 auto;
+    font-family: arial;
+    position: relative;
+    color: steelblue;
+}
+
+.inner0 {
+    top: 15px;
+}
+
+.inner1{
+    top: 95px;
+}
+
+.details {
+    display: inline-block;
+    width: 45%;
+    margin: 1%;
+    padding: 1%;
+}
+
+.title {
+    text-align: center;
+    border: solid #A49FAD 2px;
+    border-radius: 3px;
+    color: white;
+    background-color: #A49FAD;
+    padding: 3px 0 3px 0;
+    
+}
+
+.necessary {
+    color: red;
+}
