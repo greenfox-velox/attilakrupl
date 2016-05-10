@@ -1,29 +1,38 @@
-.cont {
-    border: dashed white 2px;
-    width: 500px;
-    position: absolute;
-    left: 155px;
-    display: block;
+body {
+  color: rgb(74,66,97);
 }
 
 main {
-    height: 1000px;
-    width: 820px;
+    height: auto;
+    width: 720px;
     background-color: #DCD6CD;
     margin: 0 auto;
     font-family: arial;
-    position: relative;
-    color: steelblue;
+    }
+
+.cont {
+    width: 500px;
+    height: auto;
+    margin: 0 auto;
 }
+
 
 .inner0 {
-    top: 15px;
-}
+  padding-top: 40px;
+    }
 
 .inner1{
-    top: 95px;
-}
+  height: 360px;
+  }
 
+.inner2{
+  padding-bottom: 40px;
+  }
+
+h1 {
+  font-size: 16px;
+  margin-left: 2%;
+}
 .details {
     display: inline-block;
     width: 45%;
@@ -46,10 +55,70 @@ main {
     color: red;
 }
 
-.brand-enum {
+.brand-enum, .n_right {
   float: left;
+  font-size: .8em;
 }
 
 option:first {
     color: #999;
+}
+
+textarea {
+  width: 98%;
+  margin: 1%;
+  padding: 1%;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  vertical-align: top;
+  height: 5em;
+  resize: vertical;
+}
+
+.save {
+    background: rgb(82,73,107);
+    background: linear-gradient(rgb(82,73,107), rgb(66,59,87));
+    color: white;
+    border: none;
+    border-bottom: 2px black solid;
+
+}
+
+.discard {
+   float: right;
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 45px;
+    border-radius: 2px;
+}
+
+input {
+    width: auto;
+}
+
+.roundedge {
+  border-radius: 5px;
+}
+
+.align {
+  padding: 2%;
+}
+
+.neighbour {
+  display: flex;
+}
+
+.n_left {
+  flex-shrink: 1;
+}
+
+.n_right {
+  flex-shrink: 1;
+}
+
+p, label, .gender_l {
+  font-size: 0.8em;
+  font-weight: bold;
 }
