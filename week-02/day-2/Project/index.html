@@ -21,12 +21,12 @@
           <div class="neighbour">
             <div calss="n_left">
               <label for="dob">Születési éved</label><br>
-              <input class="roundedge" type="number" placeholder="pl.1984" maxlength="4" id="dob" /><br>
+              <input class="roundedge year" type="number" placeholder="pl.1984" maxlength="4" id="dob" /><br>
             </div>
             <div class="n_right">
-              <label for="gender">Nemed</label><br>
-              <input type="radio" class="gender" name="gender" value="female"/> nő
-              <input type="radio" class="gender" name="gender" value="male"/> férfi <br>
+              <label class="gender_l" for="gender">Nemed</label><br>
+              <input type="radio" id="gender" name="gender" value="female"/> nő
+              <input type="radio" name="gender" value="male"/> férfi <br>
             </div>
           </div>
           <label for="brands"> Milyen márkákat szeretsz?</label><br>
@@ -44,7 +44,7 @@
             <input type="checkbox"  name="brands" value="tesla" />Tesla <br>
             <input type="checkbox"  name="brands" value="yahoo" />Yahoo <br>
           </div>
-          <p>Többet is választhatsz!</p>
+          <p class="multi_choice">Többet is választhatsz!</p>
         </div>
 
         <div class="details">
@@ -75,7 +75,7 @@
           <label  class="roundedge" for="cv">CV feltöltése</label><br>
           <input type="button" value="FILE KIVÁLASZTÁSA"/><br>
           <input type="checkbox" name="TnCs" value="accepted">Elfogadom a <a href="www.gmail.com">felhasználási feltételeket</a>
-          <div>
+          <div class="buttons">
             <input  class="save button" type="button" value="MENTÉS"/>
             <input  class="discard button" type="button" value="ŰRLAP TÖRLÉSE"/>
           </div>

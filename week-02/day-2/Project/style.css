@@ -4,7 +4,7 @@ body {
 
 main {
     height: auto;
-    width: 720px;
+    width: 620px;
     background-color: #DCD6CD;
     margin: 0 auto;
     font-family: arial;
@@ -22,10 +22,11 @@ main {
     }
 
 .inner1{
-  height: 360px;
+  height: 300px;
   }
 
 .inner2{
+  height: 300px;
   padding-bottom: 40px;
   }
 
@@ -42,12 +43,13 @@ h1 {
 }
 
 .title {
-    text-align: center;
-    border: solid #A49FAD 2px;
+    text-align: left;
+    border: solid rgb(147,140,151) 2px;
     border-radius: 3px;
     color: white;
-    background-color: #A49FAD;
-    padding: 3px 0 3px 0;
+    background-color: rgb(147,140,151);
+    padding: 6px 0 6px 5px;
+    font-weight: 100;
 
 }
 
@@ -58,6 +60,7 @@ h1 {
 .brand-enum, .n_right {
   float: left;
   font-size: .8em;
+  width: 48%;
 }
 
 option:first {
@@ -86,6 +89,10 @@ textarea {
 
 .discard {
    float: right;
+   background: rgb(255,255,255);
+   background: linear-gradient(rgb(255,255,255), rgb(230,230,230));
+   border: solid 1px rgb(147 ,140,51) ;
+
 }
 
 .button {
@@ -103,7 +110,7 @@ input {
 }
 
 .align {
-  padding: 2%;
+  padding: 0% 2% 2% 2%;
 }
 
 .neighbour {
@@ -122,3 +129,15 @@ p, label, .gender_l {
   font-size: 0.8em;
   font-weight: bold;
 }
+
+.year {
+    width: 60px;
+}
+
+.multi_choice {
+  color: grey;
+  font-size: .7em;
+  margin-top: 15px;
+}
+
+.buttons
