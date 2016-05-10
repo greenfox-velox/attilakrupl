@@ -28,6 +28,7 @@ main {
     width: 45%;
     margin: 1%;
     padding: 1%;
+    float: left;
 }
 
 .title {
