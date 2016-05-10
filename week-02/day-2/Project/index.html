@@ -7,13 +7,13 @@
   </head>
   <body>
     <main>
+      <form action="" method="post">
       <div class="cont inner0">
         <h1>Profil</h1>
       </div>
       <div class="cont inner1">
         <div class="details">
           <p class="title">Személyes adatok</p>
-          <form action="" method="post">
           <label for="name">Név <span class="necessary">*</span></label><br>
           <input type="text" id="name" />
           <label for="dob">Születési éved</label><br>
@@ -21,27 +21,51 @@
           <label for="gender">Nemed</label><br>
           <input type="radio" id="gender" name="gender" value="female"/> nő
           <input type="radio" name="gender" value="male"/> férfi <br>
-          <label for="brands"> Milyen márkákat szeretsz?</label><br> 
-          <input type="checkbox" id="brands" name="brands" value="adidas" />Adidas <br>
-          <input type="checkbox"  name="brands" value="apple" />Apple <br>
-          <input type="checkbox"  name="brands" value="coca-cola" />Coca-Cola <br>
-          <input type="checkbox"  name="brands" value="mazda" />Mazda <br>
-          <input type="checkbox"  name="brands" value="nike" />Nike <br>
-          <input type="checkbox"  name="brands" value="opel" />Opel <br>
-          <input type="checkbox"  name="brands" value="ray-ban" />Ray-Ban <br>
-          <input type="checkbox"  name="brands" value="starbucks" />Starbucks <br>
-          <input type="checkbox"  name="brands" value="tesla" />Tesla <br>
-          <input type="checkbox"  name="brands" value="yahoo" />Yahoo <br>
-          <p>Többet is választhatsz!</p> 
-        
-          </form>
+          <label for="brands"> Milyen márkákat szeretsz?</label><br>
+          <div class="brand-enum">
+            <input type="checkbox" id="brands" name="brands" value="adidas" />Adidas <br>
+            <input type="checkbox"  name="brands" value="apple" />Apple <br>
+            <input type="checkbox"  name="brands" value="coca-cola" />Coca-Cola <br>
+            <input type="checkbox"  name="brands" value="mazda" />Mazda <br>
+            <input type="checkbox"  name="brands" value="nike" />Nike <br>
+          </div>
+          <div class="brand-enum">
+            <input type="checkbox"  name="brands" value="opel" />Opel <br>
+            <input type="checkbox"  name="brands" value="ray-ban" />Ray-Ban <br>
+            <input type="checkbox"  name="brands" value="starbucks" />Starbucks <br>
+            <input type="checkbox"  name="brands" value="tesla" />Tesla <br>
+            <input type="checkbox"  name="brands" value="yahoo" />Yahoo <br>
+          </div>
+          <p>Többet is választhatsz!</p>
+
+
+
         </div>
         <div class="details">
           <p class="title">Kapcsolat</p>
-        </div>  
+          <label for="tel">Telefonszám <span class="necessary">*</span></label>
+          <input type="tel" placeholder="+36 - -  - - -  - - - -" name="tel" /><br>
+          <label for="email">E-mail cím <span class="necessary">*</span></label>
+          <input type="email" id="email" name="email" placeholder="nev@domain.hu" />
+          <label for="fb">Facebook profilod</label>
+          <input type="text" id="fb" name="fb" placeholder="http://facebook.com/..." /><br>
+          <label for="tw">Twitter profilod</label>
+          <input type="text" id="tw" name="tw" placeholder="http://twitter.com/..." />
+          <p for="tw">Milyen házban laksz?</p>
+          <select name="home">
+            <option value="">Válassz típust!</option>
+            <option value="tiny">Kicsi</option>
+            <option value="medium">Közepes</option>
+            <option value="huge">Nagy</option>
+          </select>
+
+        </div>
       </div>
       <div class="cont inner2">
+        <label for="tel">Telefonszám <span class="necessary">*</span></label>
+        <input type="tel" placeholder="+36 - -  - - -  - - - -" name="tel" />
       </div>
+      </form>
     </main>
   </body>
 </html>

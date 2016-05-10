@@ -3,6 +3,7 @@
     width: 500px;
     position: absolute;
     left: 155px;
+    display: block;
 }
 
 main {
@@ -38,9 +39,17 @@ main {
     color: white;
     background-color: #A49FAD;
     padding: 3px 0 3px 0;
-    
+
 }
 
 .necessary {
     color: red;
+}
+
+.brand-enum {
+  float: left;
+}
+
+option:first {
+    color: #999;
 }
