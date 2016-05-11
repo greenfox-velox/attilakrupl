@@ -1,0 +1,39 @@
+
+body {
+  height: 100%;
+  margin: 0;
+  padding-left: 0;
+  font-family: sans-serif;
+}
+
+.outer {
+  width: 100%;
+  display: flex;
+  }
+
+aside {
+  width: 175px;
+  height: 100%;
+  background-color: blue;
+}
+
+.as-inner {
+  padding: 5px;
+  width: 100%;
+}
+
+.logo {
+  width: 160px;
+}
+
+.right-col {
+  
+}
+
+header {
+  background-color: yellow;
+}
+
+main {
+  background-color: grey;
+}
