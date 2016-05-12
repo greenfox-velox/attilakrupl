@@ -147,14 +147,16 @@ body {
 
                 .section-title {
                   border-bottom: 1px solid rgb(170,170,170);
-                  font-family: "Times Roman";
+                  font-family: "Times New Roman";
                   font-size: 15px;
                   margin-bottom: 7px;
+
                 }
 
                     .name {
                       margin: 0px;
                       line-height: 37px;
+                      font-weight: lighter;
                     }
 
                 .from-wiki {
@@ -233,4 +235,12 @@ body {
 
                 .content-text {
                   padding-left: 30px;
+                }
+
+                .subsection-name {
+                  margin: 21px 0 5px 0;
+                  line-height: 27px;
+                  font-size: 21px;
+                  font-weight: lighter;
+
                 }
