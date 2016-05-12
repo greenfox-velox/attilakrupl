@@ -6,34 +6,35 @@ body {
   font-family: sans-serif;
 }
 
-.outer {
-  width: 100%;
-  display: flex;
-  }
+    .outer {
+      width: 100%;
 
-aside {
-  width: 175px;
-  height: 100%;
-  background-color: blue;
-}
+      }
 
-.as-inner {
-  padding: 5px;
-  width: 100%;
-}
+        aside {
+          width: 175px;
+          height: 100%;
+          background-color: blue;
+          float: left;
+        }
 
-.logo {
-  width: 160px;
-}
+            .as-inner {
+              padding: 5px;
+              width: 100%;
+            }
 
-.right-col {
-  
-}
+                .logo {
+                  width: 160px;
+                }
 
-header {
-  background-color: yellow;
-}
+        .right-col {
+          float: right;
+        }
 
-main {
-  background-color: grey;
-}
+            header {
+              background-color: yellow;
+            }
+
+            main {
+              background-color: grey;
+            }

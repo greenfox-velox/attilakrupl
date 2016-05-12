@@ -1,0 +1,83 @@
+
+body {
+  height: 100%;
+  margin: 0;
+  padding-left: 0;
+  font-family: sans-serif;
+}
+
+    .outer {
+      width: 100%;
+      display: flex;
+      }
+
+        aside {
+          width: 175px;
+          background: rgb(246,246,246);
+          font-size: 12px;
+          border-right: rgb(167,215,249) solid 1px;
+        }
+
+            .as-inner {
+              width: 100%;
+            }
+
+                .as-inner-00 {
+                  padding-bottom: 25px;
+                  }
+
+                    .logo {
+                      width: 130px;
+                      padding: 10px 15px 10px 15px;
+                    }
+
+                 .as-inner-01 {
+                   padding: 4px 0 4px 0;
+                   border-bottom: rgb(216,216,216) solid 1px;
+                 }
+
+                    .as-inner-01-link {
+                      margin-left: 10px;
+                      padding-left: 10px;
+                      padding-top: 5px;
+                    }
+
+                    /*Apply this styling for all the links in the sidebar: */
+
+                      .as-inner-01-link a {
+                      text-decoration: none;
+                      color: rgb(6, 69, 173);
+                    }
+
+                    .as-inner-01-link a:hover {
+                      text-decoration: underline;
+                    }
+
+                    .as-inner-01-link a:visited {
+                      color: rgb(11, 0, 128);
+                    }
+
+                    .side-title {
+                      font-size: 12px;
+                      font-weight: normal;
+                      color: rgb(77, 77, 77);
+                      margin: 0 0 0 15px;
+                      padding: 3px 0 3px 3px;
+
+                    }
+
+                    .as-inner-01-link-v2 {
+                       margin-left: 20px;
+                     }
+
+        .right-col {
+
+        }
+
+            header {
+              background-color: yellow;
+            }
+
+            main {
+              background-color: grey;
+            }
