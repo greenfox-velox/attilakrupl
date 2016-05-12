@@ -71,13 +71,67 @@ body {
                      }
 
         .right-col {
-
+          font-size: 14px;
         }
 
             header {
-              background-color: yellow;
+              background-color: rgb(246,246,246);
+              height: 80px;
+              border-bottom:  rgb(167,215,249) solid 1px;
+              position: relative;
             }
+
+                .hea01 {
+                    position: absolute;
+                }
+
+                .left-bott {
+                  left: 0;
+                  bottom: 0;
+                }
+
+                .left-bott, .right-bott, .right-top {
+                  margin: 0;
+                  padding: 0;
+
+                }
+
+                .as-inner-01-link ul li {
+                  list-style: none;
+                  display: inline;
+                  border-right: 1px solid rgb(167,215,249);
+                }
+
+                .right-top ul li{
+                  float: right;
+                  border: none;
+                  top: 0px;
+                  right: 0px;
+                }
+
+                .as-inner-01-link ul {
+                  padding: 5px 0 5px 0;
+                  margin: 0;
+                }
+
+                    a.header-link1 {
+                      padding: 16px 6px 0px 6px;
+                    }
+
+                    a.header-link2 {
+                      padding: 0px 6px;
+                    }
+
+                    .right-top {
+                      right: 0px;
+                      top: 0px;
+                    }
 
             main {
               background-color: grey;
             }
+
+
+
+
+            
