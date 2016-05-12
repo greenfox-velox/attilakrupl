@@ -100,6 +100,7 @@ body {
                   list-style: none;
                   display: inline;
                   border-right: 1px solid rgb(167,215,249);
+                  padding: 5px 0;
                 }
 
                 .right-top ul li{
@@ -122,16 +123,114 @@ body {
                       padding: 0px 6px;
                     }
 
-                    .right-top {
-                      right: 0px;
-                      top: 0px;
-                    }
+                .right-top {
+                  right: 0px;
+                  top: 0px;
+                }
+
+                .right-bott {
+                  right: 0px;
+                  bottom: 0px;
+                  max-height: 40px;
+
+                }
+
 
             main {
-              background-color: grey;
+              background-color: white;
             }
 
+                .m-inner {
+                  padding: 16px;
+                  line-height: 22px;
+                }
+
+                .section-title {
+                  border-bottom: 1px solid rgb(170,170,170);
+                  font-family: "Times Roman";
+                  font-size: 15px;
+                  margin-bottom: 7px;
+                }
+
+                    .name {
+                      margin: 0px;
+                      line-height: 37px;
+                    }
+
+                .from-wiki {
+                  font-size: 12.88px;
+                }
+
+                .hatnote {
+                  font-style: italic;
+                  padding: 15px 0 0 22px;
+                  margin-bottom: 7px;
+                }
+
+                .biography {
+                  background-color: rgb(249, 249, 249);
+                  border: rgb(170, 170, 170) solid 1px;
+                  clear: right;
+                  display: table;
+                  float: right;
+                  font-size: 12.32px;
+                  height: 513px;
+                                    margin: 6px 0 6px 12px;
+                  padding: 2.46px;
+                  width: 264px;
+                }
 
 
+                    .bio-pic {
+                      height: 277px;
+                      width: 220px;
+                      margin: 0 auto;
+                    }
 
-            
+                    .subscr {
+                      margin: 0 auto;
+                    }
+
+                p:first-child {
+                  margin: 0;
+                }
+
+                .content-list {
+                  width: 125px;
+                  background-color: rgb(249, 249, 249);
+                  border: rgb(170, 170, 170) solid 1px;
+                }
+
+                .con-list-inner {
+                  padding-left: 8px;
+                  font-size: 13px;
+                }
+
+                .cont-title {
+                  font-size: 13px;
+                  padding-left: 5px;
+                  margin: 5px 0;
+                }
+
+                .content-list ul {
+                  padding: 0 0 5px 0;
+                  margin: 0;
+                }
+
+                .content-list ul li {
+                  list-style: none;
+                  padding: 0;
+                }
+
+                .content-link1 {
+                  text-decoration: none;
+                  color: rgb(6, 69, 173);
+                }
+
+                .content-link1:hover {
+                  text-decoration: underline;
+                }
+
+                .content-text {
+                  padding-left: 30px;
+                }
