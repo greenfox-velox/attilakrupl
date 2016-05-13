@@ -190,7 +190,7 @@ body {
                     }
 
                     .subscr {
-                      margin: 0 auto;
+                      text-align: center;
                     }
 
                 p:first-child {
@@ -242,5 +242,45 @@ body {
                   line-height: 27px;
                   font-size: 21px;
                   font-weight: lighter;
+                }
 
+                sup {
+                  line-height: normal;
+                }
+
+                .indented-par {
+                  padding-left: 45px;
+                  padding-right: 45px;
+                }
+
+                .indented-par2 {
+                  padding-left: 65px;
+                  padding-right: 45px;                  
+                }
+
+                .ita-sp {
+                  font-style: italic;
+                }
+
+                .image-container {
+                  float: right;
+                  width: 230px;
+                  background-color: rgb(249, 249, 249);
+                  border: rgb(170, 170, 170) solid 1px;
+                  font-size: 14px;
+                  box-sizing: border-box;
+                  padding: 5px;
+                  margin: 5px;
+                }
+
+                .flexed {
+                  height: 351px;
+                }
+
+                .body-pic {
+                  width: 220px;
+                }
+
+                .flex-this {
+                  display: flex;
                 }
