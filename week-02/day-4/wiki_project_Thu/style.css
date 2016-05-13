@@ -75,7 +75,8 @@ body {
         }
 
             header {
-              background-color: rgb(246,246,246);
+
+              background: linear-gradient(white 50%, rgb(246,246,246) ) ;
               height: 80px;
               border-bottom:  rgb(167,215,249) solid 1px;
               position: relative;
@@ -255,7 +256,7 @@ body {
 
                 .indented-par2 {
                   padding-left: 65px;
-                  padding-right: 45px;                  
+                  padding-right: 45px;
                 }
 
                 .ita-sp {
