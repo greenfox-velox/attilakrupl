@@ -11,24 +11,33 @@ body {
       display: flex;
       }
 
-        aside {
-          width: 175px;
-          background: rgb(246,246,246);
-          font-size: 12px;
-          border-right: rgb(167,215,249) solid 1px;
+        .corner {
+          height: 80px;
+          width: 176px;
+          background: linear-gradient(white 50%, rgb(246,246,246) );
         }
 
+        aside {
+          width: 176px;
+          background: rgb(246,246,246);
+          font-size: 12px;
+          }
+
+
             .as-inner {
-              width: 100%;
+              width: 166px;
+              padding-left: 10px;
             }
 
                 .as-inner-00 {
                   padding-bottom: 25px;
+                  height: 85px;
                   }
 
                     .logo {
                       width: 130px;
                       padding: 10px 15px 10px 15px;
+                      transform: translateY(-75px);
                     }
 
                  .as-inner-01 {
@@ -79,6 +88,7 @@ body {
               background: linear-gradient(white 50%, rgb(246,246,246) ) ;
               height: 80px;
               border-bottom:  rgb(167,215,249) solid 1px;
+              border-left: rgb(167,215,249) solid 1px;
               position: relative;
             }
 
@@ -111,6 +121,12 @@ body {
                   right: 0px;
                 }
 
+
+                .nav-line {
+                  display: inline-block;
+                }
+
+
                 .as-inner-01-link ul {
                   padding: 5px 0 5px 0;
                   margin: 0;
@@ -131,7 +147,7 @@ body {
 
                 .right-bott {
                   right: 0px;
-                  bottom: 0px;
+                  bottom: -13px;
                   max-height: 40px;
 
                 }
@@ -139,6 +155,8 @@ body {
 
             main {
               background-color: white;
+              border-left: rgb(167,215,249) solid 1px;
+              border-bottom: rgb(167,215,249) solid 1px;
             }
 
                 .m-inner {
