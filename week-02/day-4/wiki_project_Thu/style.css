@@ -9,6 +9,7 @@ body {
     .outer {
       width: 100%;
       display: flex;
+      background-color: rgb(246,246,246);
       }
 
         .corner {
@@ -43,6 +44,11 @@ body {
                  .as-inner-01 {
                    padding: 4px 0 4px 0;
                    border-bottom: rgb(216,216,216) solid 1px;
+                 }
+
+                 .lan {
+                   padding: 4px 0 4px 0;
+                   border-bottom: none;
                  }
 
                     .as-inner-01-link {
@@ -149,7 +155,11 @@ body {
                   right: 0px;
                   bottom: -13px;
                   max-height: 40px;
+                }
 
+                .search-bar {
+                  width: 400px;
+                  height: 22px;
                 }
 
 
@@ -290,6 +300,11 @@ body {
                   box-sizing: border-box;
                   padding: 5px;
                   margin: 5px;
+                }
+
+                .pers-extra {
+                  overflow: hidden;
+                  margin-right: 30px;
                 }
 
                 .flexed {
