@@ -12,12 +12,13 @@ body {
 
 aside {
   background-color: blue;
-  width: 175px;
+  width: 275px;
 }
 
 .right-column {
   background-color: red;
   display: flex;
+  flex-direction: column;
 }
 
 header {
