@@ -1,0 +1,33 @@
+body {
+  width: 100%;
+  font-family: sans-serif;
+  font-size: 14px;
+  background-color: grey;
+}
+
+.outer {
+  background-color: yellow;
+  display: flex;
+}
+
+aside {
+  background-color: blue;
+  width: 175px;
+}
+
+.right-column {
+  background-color: red;
+  display: flex;
+}
+
+header {
+  background-color: green;
+}
+
+main {
+  background-color: pink;
+}
+
+footer {
+  background-color: cyan;
+}
