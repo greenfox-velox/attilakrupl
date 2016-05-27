@@ -1,3 +1,4 @@
+
 from tkinter import *
 import math
 import random
@@ -21,17 +22,13 @@ def draw_hexagon(x, y, a):
 def draw_fractal(x, y, size):
     draw_hexagon(x, y, size)
     less = size/2
-    if size >= 20:
+    if size >= 5:
         draw_fractal(x, y, less)
         draw_fractal(x + 3/4*size, y + math.sqrt(3)*size/4 , less)
         draw_fractal(x, y+(math.sqrt(3)*size)/2, less)
     else:
         pass    
     
-        
-
-
-
 draw_fractal(250, 10,500)
 
 root.mainloop()
