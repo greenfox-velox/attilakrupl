@@ -6,6 +6,7 @@ def triangle_type(a, b, c):
     bef1 = b 
     bef2 = c 
     x = 0
+    
     if atf < bef1:
         x = atf
         atf = bef1
@@ -24,7 +25,7 @@ def triangle_type(a, b, c):
         bef2 = x
     else:
         pass
-         
+             
     if bef1 + bef2 <= atf:
         return 0
     else:
@@ -39,3 +40,6 @@ def triangle_type(a, b, c):
      
      
 print (triangle_type(2,4,6))
+print (triangle_type(3,4,5))
+print (triangle_type(3,3,3))
+print (triangle_type(2,5,6))
