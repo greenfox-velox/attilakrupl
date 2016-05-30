@@ -1,16 +1,16 @@
 import unittest
-from attila_krupl_work import anagram
+from attila_krupl_work import anagramm
 from attila_krupl_work import count_letters
 
 class AnagramTest(unittest.TestCase):
     def test_for_case_sensitivity(self):
-        self.assertTrue(anagram("alma","aLmA"))
+        self.assertTrue(anagramm("alma","aLmA"))
     def test_for_complication(self):
-        self.assertFalse(anagram("skfjhKUI&tgfkjh","sidkjfhb4k"))
+        self.assertFalse(anagramm("skfjhKUI&tgfkjh","sidkjfhb4k"))
     def test_for_similar_parameters(self):
-        self.assertFalse(anagram("akksi","akksik"))
+        self.assertFalse(anagramm("akksi","akksik"))
     def test_for_sepcial_characters(self):
-        self.assertTrue(anagram("&%^?!.,", ",?&!%^."))
+        self.assertTrue(anagramm("&%^?!.,", ",?&!%^."))
         
 class CountLettersTest(unittest.TestCase):
     def test_for_case_sensitivity(self):
