@@ -1,14 +1,5 @@
+from welcome import welcome
 import sys
-
-def welcome():
-    print ("Python Todo application")
-    print ("=======================")
-    print ("")
-    print ("Command line arguments:")
-    print (" -l   Lists all the tasks")
-    print (" -a   Adds a new task")
-    print (" -r   Removes an task")
-    print (" -c   Completes an task")
 
 def readFile(file_name):
     f = open(file_name)
@@ -27,11 +18,14 @@ def appendTask(file_name, task):
     f.close()
     
 def listToDos(file_name):
-    if len(readFile(file_name)) > 0:
-        printList(file_name)
-    else:
-        print ("No todos for today! :)")
-
+    try:
+        if len(readFile(file_name)) > 0:
+            printList(file_name)
+        else:
+            print ("No todos for today! :)")
+    except FileNotFoundError:
+        fileNotFound(file_name)
+        
 def unableToAdd():
     print ("Unable to add: No task is provided")
     
@@ -39,6 +33,7 @@ def override(file_name, list1):
     f = open(file_name, 'w')
     for i in list1:
         f.write(i)
+    f.write("")
     f.close()
     
 def removeNthItem(file_name, args):
@@ -56,6 +51,15 @@ def removeNthAndExceptions(file_name, args):
         print("Unable to remove: Index is out of bound")
     except ValueError:
         print("Unable to remove: Index is not a number")
+
+def unsuppArg():
+    print ("Unsupported argument\n")
+    welcome()
+    
+def fileNotFound(file_name):
+    f = open(file_name, "w")
+    f.write("")
+    f.close()
     
 def main():
           
@@ -68,15 +72,14 @@ def main():
         listToDos(input_file)
     elif len(argList) == 3 and argList[1] =='-a':
         appendTask(input_file, (argList[2]+"\n"))
-    elif argList[-1] == '-a':
-        unableToAdd()
     elif len(argList) == 3 and argList[1] =='-r':
         removeNthAndExceptions(input_file, argList)
+    elif argList[-1] == '-a':
+        unableToAdd()
     elif argList[-1] =='-r':
         unableToRemove()
     else:
-        print ("Unsupported argument\n")
-        welcome()
+        unsuppArg()
         
         
             
