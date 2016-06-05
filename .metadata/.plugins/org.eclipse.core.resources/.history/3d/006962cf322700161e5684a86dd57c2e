@@ -1,8 +1,0 @@
-import unittest
-from work import work
-
-class TestWork(unittest.TestCase):
-    
-
-if __name__ == '__main__':
-    unittest.main()

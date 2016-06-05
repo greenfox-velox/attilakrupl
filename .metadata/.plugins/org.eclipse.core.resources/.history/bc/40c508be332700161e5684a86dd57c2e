@@ -1,9 +1,0 @@
-import unittest
-from work import work
-
-class TestWork(unittest.TestCase):
-    def test_1(self):
-        self.assertTrue(work("",""))
-
-if __name__ == '__main__':
-    unittest.main()

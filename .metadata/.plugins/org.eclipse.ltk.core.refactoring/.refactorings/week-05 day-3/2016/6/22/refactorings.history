@@ -1,3 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">&#x0A;<refactoring comment="Rename resource &apos;week-05 day-3/Stop Spinning my Words&apos; to &apos;Stop Spinning my Words.py&apos;" description="Rename resource &apos;Stop Spinning my Words&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="Stop Spinning my Words" name="Stop Spinning my Words.py" stamp="1464764671349" updateReferences="true"/>&#x0A;<refactoring comment="Rename resource &apos;week-05 day-3/ToDo/appendTask&apos; to &apos;appendTask.py&apos;" description="Rename resource &apos;appendTask&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="ToDo/appendTask" name="appendTask.py" stamp="1464853418399" updateReferences="true"/>
-</session>

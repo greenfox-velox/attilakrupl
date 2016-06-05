@@ -1,8 +1,0 @@
-def spin_words(sentence):
-    print (len(sentence))
-    for i in sentence[len(sentence)::-1]:
-    	print (i)
-    return None
-    
-    
-spin_words("Malakala")

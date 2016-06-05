@@ -1,3 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">&#x0A;<refactoring comment="Rename resource &apos;week-05 day-4/csvPractice.py&apos; to &apos;csvPracticeRead.py&apos;" description="Rename resource &apos;csvPractice.py&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="csvPractice.py" name="csvPracticeRead.py" stamp="1464866259129" updateReferences="true"/>&#x0A;<refactoring comment="Rename resource &apos;week-05 day-4/csvPracticeWrite.csv&apos; to &apos;csvPracticeWrite.py&apos;" description="Rename resource &apos;csvPracticeWrite.csv&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="csvPracticeWrite.csv" name="csvPracticeWrite.py" stamp="1464866287818" updateReferences="true"/>
-</session>

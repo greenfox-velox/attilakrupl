@@ -1,5 +1,0 @@
-import random
-def throw_rigged():
-    list1 = ()
-    i = random.randrange(0,100)
-    return list1[i]    

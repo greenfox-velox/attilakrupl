@@ -1,2 +1,0 @@
-def anagramm(string1, string2):
-    return True

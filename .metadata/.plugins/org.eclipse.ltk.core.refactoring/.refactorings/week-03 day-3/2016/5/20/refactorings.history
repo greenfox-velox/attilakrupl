@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Rename resource &apos;week-03 day-3/Circle&apos; to &apos;Circle.py&apos;" description="Rename resource &apos;Circle&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="Circle" name="Circle.py" stamp="1463658760392" updateReferences="true"/>
-</session>
