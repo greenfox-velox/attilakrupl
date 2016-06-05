@@ -1,0 +1,19 @@
+-- VERSION_4
+-- START DISKCACHE_2
+C:\Users\Attila\workspace\.metadata\.plugins\org.eclipse.core.resources\.projects\week-03 day-5\com.python.pydev.analysis\v2_indexcache
+01remove|1463861516251394000|C:\Users\Attila\workspace\week-03 day-5\01remove.py
+02isnum|1463872002237822000|C:\Users\Attila\workspace\week-03 day-5\02isnum.py
+-- END DISKCACHE
+-- START DICTIONARY
+2
+1=02isnum
+2=01remove
+-- END DICTIONARY
+-- START TREE 1
+2
+my_|1|my_parse_int!10@
+rem|1|remove_smallest!18@
+-- END TREE
+-- START TREE 2
+0
+-- END TREE

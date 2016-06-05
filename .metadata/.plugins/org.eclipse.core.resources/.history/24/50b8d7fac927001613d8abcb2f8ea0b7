@@ -1,0 +1,12 @@
+def spin_words(sentence):
+	rev = ""
+	for n in sentence:
+		if len(n) > 5:
+			for i in n[len(n)::-1]:
+				rev += i
+		else:
+			rev += i
+	return rev
+    
+    
+print (spin_words("Malakala ha valakala"))

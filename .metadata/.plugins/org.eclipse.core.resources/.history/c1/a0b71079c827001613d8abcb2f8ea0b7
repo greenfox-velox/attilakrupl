@@ -1,0 +1,10 @@
+def spin_words(sentence):
+	new = sentence.split()
+    print (len(sentence))
+    rev = ""
+    for i in sentence[len(sentence)::-1]:
+    	rev += i
+    return rev
+    
+    
+print (spin_words("Malakala ha valakala"))

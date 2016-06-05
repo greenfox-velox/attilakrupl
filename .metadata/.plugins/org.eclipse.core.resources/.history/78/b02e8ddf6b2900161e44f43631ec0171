@@ -1,0 +1,6 @@
+import random
+def throw_rigged(num):
+    for i in range(num):
+        print (random.randrange(1,7))
+    
+throw_rigged(1000)

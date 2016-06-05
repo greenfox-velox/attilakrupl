@@ -1,0 +1,7 @@
+try:
+    print('hello')
+    print(12 / 0)
+except:
+    pass
+
+print ('majom')

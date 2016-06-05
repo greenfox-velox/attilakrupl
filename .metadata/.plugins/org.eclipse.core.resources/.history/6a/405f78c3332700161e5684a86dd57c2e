@@ -1,0 +1,2 @@
+def work(input1, input2):
+    return True

@@ -1,0 +1,19 @@
+def iq_test(numbers):
+    new = numbers.split()
+    even = {}
+    evenc = 0
+    odd = {}
+    oddc = 0
+    for i in range(len(new)):
+        if new[i] % 2 == 0:
+            even += {evenc:i}
+        else:
+            odd += {oddc:i}
+    
+    if len(even) < len(odd):
+        return even
+    
+    if 
+        
+    
+iq_test("2 4 7 8 10")

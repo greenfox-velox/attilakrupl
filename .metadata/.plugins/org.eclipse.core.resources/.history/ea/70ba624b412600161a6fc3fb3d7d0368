@@ -1,0 +1,11 @@
+import unittest
+from attila_krupl_work import anagram
+
+class AnagramTest(unittest.TestCase):
+    def test_for_case_sensitivity(self):
+        self.assertTrue(anagram("alma","aLmA"))
+    def test_for_complication(self):
+        self.assertFalse(anagram("skfjhKUI&tgfkjh","sidkjfhb4k"))
+
+if __name__ == '__main__':
+    unittest.main()

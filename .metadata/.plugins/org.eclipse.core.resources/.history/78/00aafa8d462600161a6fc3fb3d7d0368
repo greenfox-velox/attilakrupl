@@ -1,0 +1,20 @@
+import unittest
+from attila_krupl_work import anagram
+from attila_krupl_work import count_letters
+
+class AnagramTest(unittest.TestCase):
+    def test_for_case_sensitivity(self):
+        self.assertTrue(anagram("alma","aLmA"))
+    def test_for_complication(self):
+        self.assertFalse(anagram("skfjhKUI&tgfkjh","sidkjfhb4k"))
+    def test_for_similar_parameters(self):
+        self.assertFalse(anagram("akksi","akksik"))
+    def test_for_sepcial_characters(self):
+        self.assertTrue(anagram("&%^?!.,", ",?&!%^."))
+        
+class CountLettersTest(unittest.TestCase):
+    def test_for_case_sensitivity(self):
+        self.assertEqual(count_letters("Attila"), {'A': 2, 't': 2, 'i': 1, 'l': 1})                                 
+        
+if __name__ == '__main__':
+    unittest.main()

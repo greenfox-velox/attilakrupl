@@ -1,0 +1,22 @@
+
+from tkinter import *
+import math
+import random
+
+
+root = Tk()
+
+w = 1000 
+canvas = Canvas(root, width = 1.5*w, height = w, bg="black")
+canvas.pack()
+ 
+def draw_branch(x, y, a):
+    canvas.create_line(x, y, x, y+a, fill="gold")
+    
+def draw_fractal(x, y, size):
+    draw_branch(x, y, size)
+         
+        
+draw_fractal(750, 900, 30)
+
+root.mainloop()

@@ -1,0 +1,75 @@
+-- VERSION_4
+-- START DISKCACHE_2
+C:\Users\Attila\workspace\.metadata\.plugins\org.eclipse.core.resources\.projects\week-03 day-3\com.python.pydev.analysis\v2_indexcache
+Circle|1463659664359739000|C:\Users\Attila\workspace\week-03 day-3\Circle.py
+f41|1463647121773470000|C:\Users\Attila\workspace\week-03 day-3\f41.py
+03|1463661750676567000|C:\Users\Attila\workspace\week-03 day-3\03.py
+f40|1463646878406396000|C:\Users\Attila\workspace\week-03 day-3\f40.py
+04|1463662481572909000|C:\Users\Attila\workspace\week-03 day-3\04.py
+05|1463667903144071000|C:\Users\Attila\workspace\week-03 day-3\05.py
+car|1463660179736088000|C:\Users\Attila\workspace\week-03 day-3\car.py
+student|1463643298593441000|C:\Users\Attila\workspace\week-03 day-3\student.py
+06|1463723559560639000|C:\Users\Attila\workspace\week-03 day-3\06.py
+07|1463723769322557000|C:\Users\Attila\workspace\week-03 day-3\07.py
+romai_arab|1463751287178749000|C:\Users\Attila\workspace\week-03 day-3\romai_arab.py
+-- END DISKCACHE
+-- START DICTIONARY
+19
+2=Circle
+3=f41
+12=pirate
+5=03
+11=f40
+8=04
+9=05
+10=student
+6=06
+7=07
+4=romai_arab
+13=Student
+14=Stack
+18=Circle.__init__
+16=pirate.__init__
+1=car
+15=Car
+19=Stack.pop
+17=Car.__init__
+-- END DICTIONARY
+-- START TREE 1
+16
+car|1|Car!9@
+cir|1|Circle!17@
+cou|1|counter!26@
+dic|1|dict_roma!35@
+jac|1|Jack_S!43@
+kis|1|kiskor!19@
+lis|2|list_reverser!50@list_doub!58@
+my_|1|my_mazda!11@
+pet|1|Peter!67@
+pir|1|pirate!41@
+rom|1|roman_number!35@
+sta|1|Stack!73@
+stu|4|students!27@student!65@Student!81@students!91@
+sug|1|sugar!90@
+to_|1|to_roman!34@
+tom|1|tomb!75@
+-- END TREE
+-- START TREE 2
+16
+__i|5|__init__!12&42@__init__!2&18@__init__!13&82@__init__!14&74@__init__!15&10@
+add|1|add_grade!10&66@
+dri|1|drink_rum!12&42@
+dru|1|drunk!16&43@
+get|3|get_average!10&66@get_area!2&18@get_circumference!2&18@
+how|1|hows_goin_mate!12&42@
+km|1|km!17&11@
+num|1|num_of_grades!10&67@
+pop|1|pop!14&74@
+pus|1|push!14&74@
+rad|1|radius!18&19@
+rid|1|ride!15&10@
+siz|1|size!14&74@
+sta|2|stack1!14&75@stack1!19&75@
+sum|1|sum_of_grades!10&67@
+typ|1|type!17&11@
+-- END TREE

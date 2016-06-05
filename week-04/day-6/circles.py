@@ -6,16 +6,16 @@ import random
 
 root = Tk()
 
-w = 1000 
+w = 1000
 canvas = Canvas(root, width = w, height = w, bg="black")
 canvas.pack()
- 
+
 def draw_circle(x, y, a):
     canvas.create_oval(x, y, x+a, y+a, fill="black", outline="gold")
-    
+
 def draw_fractal(x, y, size):
     draw_circle(x, y, size)
-    
+
     small = size/2.154
     r = small/2
     if small >= 5:
@@ -26,18 +26,7 @@ def draw_fractal(x, y, size):
         draw_fractal(x+1.02*r, y+0.14*r, 0.96*r)
         draw_fractal(x+0.66*r, y+1.5*small, 0.96*r)
         draw_fractal(x+3.33*r, y+0.94*small, 0.96*r)
-        
 
-# def draw_fractal(x, y, size):
-#     draw_hexagon(x, y, size)
-#     less = size/2
-#     if size >= 5:
-#         draw_fractal(x, y, less)
-#         draw_fractal(x + 3/4*size, y + math.sqrt(3)*size/4 , less)
-#         draw_fractal(x, y+(math.sqrt(3)*size)/2, less)
-#     else:
-#         pass    
-#      
 draw_fractal(50, 50, 900)
 
 root.mainloop()

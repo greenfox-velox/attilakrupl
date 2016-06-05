@@ -1,0 +1,8 @@
+def iq_test(numbers):
+    new = numbers.split()
+    even = 0
+    odd = 0
+    for i in new:
+        
+    
+iq_test("2 4 7 8 10")

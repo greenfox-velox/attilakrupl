@@ -1,0 +1,71 @@
+-- VERSION_4
+-- START DISKCACHE_2
+C:\Users\Attila\workspace\.metadata\.plugins\org.eclipse.core.resources\.projects\week-03 day-2\com.python.pydev.analysis\v2_indexcache
+35|1463563838496072000|C:\Users\Attila\workspace\week-03 day-2\35.py
+03|1463560747960613000|C:\Users\Attila\workspace\week-03 day-2\03.py
+36|1463562635256285000|C:\Users\Attila\workspace\week-03 day-2\36.py
+f40|1463581396675834000|C:\Users\Attila\workspace\week-03 day-2\f40.py
+04|1463562342111691000|C:\Users\Attila\workspace\week-03 day-2\04.py
+37|1463562519381127000|C:\Users\Attila\workspace\week-03 day-2\37.py
+f32|1463581643849388000|C:\Users\Attila\workspace\week-03 day-2\f32.py
+38|1463562425092182000|C:\Users\Attila\workspace\week-03 day-2\38.py
+f31|1463574360212688000|C:\Users\Attila\workspace\week-03 day-2\f31.py
+f34|1463574911686622000|C:\Users\Attila\workspace\week-03 day-2\f34.py
+f33|1463581957584397000|C:\Users\Attila\workspace\week-03 day-2\f33.py
+f36|1463577746979397000|C:\Users\Attila\workspace\week-03 day-2\f36.py
+f35|1463575327366517000|C:\Users\Attila\workspace\week-03 day-2\f35.py
+f38|1463578261197947000|C:\Users\Attila\workspace\week-03 day-2\f38.py
+f37|1463577975982458000|C:\Users\Attila\workspace\week-03 day-2\f37.py
+f39|1463578478744249000|C:\Users\Attila\workspace\week-03 day-2\f39.py
+-- END DISKCACHE
+-- START DICTIONARY
+13
+6=35
+1=03
+2=36
+13=f40
+4=f32
+3=f31
+12=f34
+5=f33
+11=f36
+8=f35
+10=f38
+7=f37
+9=f39
+-- END DICTIONARY
+-- START TREE 1
+29
+a|2|a!11@a!19@
+ae|2|ae!11@ae!27@
+af|2|af!35@af!11@
+ag|2|ag!11@ag!43@
+ah|2|ah!51@ah!11@
+ai|1|ai!11@
+app|1|appender!42@
+dou|1|double!34@
+eve|1|even_only!58@
+fak|1|fakt!66@
+hal|1|hali!26@
+i|1|i!11@
+j|1|j!11@
+k|1|k!11@
+l|1|l!11@
+len|4|lenaf!11@lenah!11@lenag!11@lenai!11@
+m|1|m!11@
+nam|1|names!75@
+num|4|numbers!83@numbers!59@numbers!91@numbers!99@
+own|1|own_min!82@
+rev|1|revert!90@
+sad|1|Sad!11@
+sho|1|shortest!74@
+sm|1|sm!11@
+stu|1|students!107@
+sug|1|sugar!106@
+sum|1|summa!98@
+tes|1|test!34@
+tex|1|text!11@
+-- END TREE
+-- START TREE 2
+0
+-- END TREE

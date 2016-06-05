@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;week-04 day-5/triangle_cat&apos; to &apos;triangle_cat.py&apos;" description="Rename resource &apos;triangle_cat&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="triangle_cat" name="triangle_cat.py" stamp="1464351617134" updateReferences="true"/>
+</session>

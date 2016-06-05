@@ -1,0 +1,73 @@
+class todo_utils:
+    def welcome(self):
+        print ("Python Todo application")
+        print ("=======================")
+        print ("")
+        print ("Command line arguments:")
+        print (" -l   Lists all the tasks")
+        print (" -a   Adds a new task")
+        print (" -r   Removes an task")
+        print (" -c   Completes an task")
+        
+    def readFile(self, file_name):
+        self.f = open(file_name)
+        result = self.f.readlines()
+        self.f.close()
+        return result
+
+    def printList(self,file_name):
+        self.todo_list = self.readFile(file_name)
+        for i in range(len(self.todo_list)):
+            print (str(i+1) + " - " + self.todo_list[i])
+
+    def appendTask(self,file_name, task):
+        self.f = open(file_name, 'a')
+        self.f.write(task)
+        self.f.close()
+
+    def listToDos(self,file_name):
+        try:
+            if len(self.readFile(file_name)) > 0:
+                self.printList(file_name)
+            else:
+                print ("No todos for today! :)")
+        except FileNotFoundError:
+            self.fileNotFound(file_name)
+            
+    def fileNotFound(self, file_name):
+        self.f = open(file_name, "w")
+        self.f.write("")
+        self.f.close()
+        
+    def unableToAdd(self):
+        print ("Unable to add: No task is provided")
+
+    def override(self, file_name, list1):
+        f = open(file_name, 'w')
+        for i in list1:
+            f.write(i)
+        f.write("")
+        f.close()
+ 
+    def removeNthItem(self,file_name, args):
+        self.todo_list = self.readFile(file_name)
+        del self.todo_list[int(args[2])-1]
+        self.override(file_name, self.todo_list)
+
+    def unableToRemove(self):
+        print ("Unable to remove: No index is provided")
+
+    def removeNthAndExceptions(self,file_name, args):
+        try:
+            self.removeNthItem(file_name, args)
+        except IndexError:
+            print("Unable to remove: Index is out of bound")
+        except ValueError:
+            print("Unable to remove: Index is not a number")
+        except FileNotFoundError:
+            self.fileNotFound(file_name)
+            
+class unsupportedArg:
+    def uA(self):
+        print ("Unsupported argument\n")
+        self.welcome()

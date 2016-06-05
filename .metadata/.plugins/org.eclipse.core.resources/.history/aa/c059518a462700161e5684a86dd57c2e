@@ -1,0 +1,17 @@
+def anagramm(string1, string2):
+ 
+    if len(string1) >= 2 and is_contained(string1, string2) and is_contained_2(string1, string2)or string1 is string2: 
+        return True
+    return False
+
+def is_contained(string1, string2):
+    for character in string1:
+        if not character in string2:
+           return False
+    return True
+
+def is_contained_2(string1, string2):
+    for character in string2:
+        if not character in string1:
+           return False
+    return True

@@ -1,20 +1,18 @@
-false
-1bla
-false
-4sdgde
-false
-fedd the monkey
-false
-mamamananana
 true
-lololol
+Wake up at 6am
 false
-2
+Wash your teeth
+false
+Feed the cats
+false
+Have a breakfast
+false
+Read the news
+false
+Meet the Fox
+false
+Code a lot
 true
-rockandroll
+Watch the new Game of Thrones episode
 false
-new task
-false
-new task
-false
-new task
+Wash the dishes

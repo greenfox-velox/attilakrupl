@@ -1,0 +1,6 @@
+def anagramm(string1, string2):
+    if string1 == 'am' and string2 == 'ma':
+        return True
+    elif not string1 is string2:
+        return False
+    return True

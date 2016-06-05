@@ -1,0 +1,16 @@
+import unittest
+from work import anagramm
+
+class TestWork(unittest.TestCase):
+    
+    def test_empty(self):
+        self.assertTrue(anagramm("",""))
+        
+    def test_different_value(self):
+        self.assertFalse(anagramm("","b"))
+        
+    def test_2(self):
+        self.assertTrue(anagramm("am","ma"))
+
+if __name__ == '__main__':
+    unittest.main()

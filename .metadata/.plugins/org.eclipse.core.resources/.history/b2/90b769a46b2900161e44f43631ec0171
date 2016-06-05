@@ -1,0 +1,5 @@
+import random
+def throw_rigged():
+    print (random.randrange(1,7))
+    
+throw_rigged()

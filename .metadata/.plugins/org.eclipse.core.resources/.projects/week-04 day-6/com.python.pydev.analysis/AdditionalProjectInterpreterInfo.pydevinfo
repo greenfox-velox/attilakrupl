@@ -1,0 +1,28 @@
+-- VERSION_4
+-- START DISKCACHE_2
+C:\Users\Attila\workspace\.metadata\.plugins\org.eclipse.core.resources\.projects\week-04 day-6\com.python.pydev.analysis\v2_indexcache
+basicTestExamples|1464465042705150000|C:\Users\Attila\workspace\week-04 day-6\basicTestExamples.py
+tree|1464450533866974000|C:\Users\Attila\workspace\week-04 day-6\tree.py
+circles|1464466646513528000|C:\Users\Attila\workspace\week-04 day-6\circles.py
+-- END DISKCACHE
+-- START DICTIONARY
+4
+3=basicTestExamples
+2=tree
+1=circles
+4=MyTest
+-- END DICTIONARY
+-- START TREE 1
+7
+can|2|canvas!11@canvas!19@
+dra|4|draw_branch!18@draw_fractal!10@draw_circle!10@draw_fractal!18@
+fun|1|fun!26@
+myt|1|MyTest!25@
+roo|2|root!11@root!19@
+tes|1|test1!27@
+w|2|w!19@w!11@
+-- END TREE
+-- START TREE 2
+1
+tes|1|test!4&26@
+-- END TREE

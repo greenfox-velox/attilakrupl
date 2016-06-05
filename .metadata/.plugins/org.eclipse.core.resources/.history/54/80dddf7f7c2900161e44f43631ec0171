@@ -1,0 +1,13 @@
+from tkinter import *
+from todo_utils import *
+from todo import *
+
+master = Tk()
+
+def listTasks():
+    todo_utils().listToDos(input_file)
+
+b = Button(master, text="OK", command=listTasks)
+b.pack()
+
+mainloop()

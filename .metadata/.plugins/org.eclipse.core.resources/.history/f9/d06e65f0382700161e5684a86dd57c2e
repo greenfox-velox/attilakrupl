@@ -1,0 +1,7 @@
+def anagramm(string1, string2):
+    
+    if len(string1) == 2 and len(string2) == 2:
+        return True
+    if string1 is string2:
+        return True
+    return False

@@ -1,0 +1,13 @@
+def countBits(n):
+    binary = str(bin(n))
+    print (binary)
+    counter = 0
+    for n in binary:
+        if n is 1:
+            counter += 1
+        else:
+            counter += 0
+    return counter
+    print (counter)
+
+countBits(7)

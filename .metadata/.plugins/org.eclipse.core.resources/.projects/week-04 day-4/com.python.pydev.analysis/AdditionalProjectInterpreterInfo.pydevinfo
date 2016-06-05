@@ -1,0 +1,48 @@
+-- VERSION_4
+-- START DISKCACHE_2
+C:\Users\Attila\workspace\.metadata\.plugins\org.eclipse.core.resources\.projects\week-04 day-4\com.python.pydev.analysis\v2_indexcache
+11|1464335402376460000|C:\Users\Attila\workspace\week-04 day-4\11.py
+01|1464250422934921000|C:\Users\Attila\workspace\week-04 day-4\01.py
+02|1464251811113474000|C:\Users\Attila\workspace\week-04 day-4\02.py
+03|1464252220310353000|C:\Users\Attila\workspace\week-04 day-4\03.py
+04|1464252532469903000|C:\Users\Attila\workspace\week-04 day-4\04.py
+05|1464252799750982000|C:\Users\Attila\workspace\week-04 day-4\05.py
+06|1464253156914445000|C:\Users\Attila\workspace\week-04 day-4\06.py
+07|1464257513576546000|C:\Users\Attila\workspace\week-04 day-4\07.py
+08|1464257687940257000|C:\Users\Attila\workspace\week-04 day-4\08.py
+09|1464257848621267000|C:\Users\Attila\workspace\week-04 day-4\09.py
+10|1464264543141746000|C:\Users\Attila\workspace\week-04 day-4\10.py
+-- END DISKCACHE
+-- START DICTIONARY
+11
+1=11
+3=01
+10=02
+11=03
+7=04
+6=05
+2=06
+4=07
+8=08
+9=09
+5=10
+-- END DICTIONARY
+-- START TREE 1
+13
+can|1|canvas!11@
+che|1|chernobil!18@
+cou|1|countdown!26@
+ext|1|exToWhy!34@
+fib|1|fibo!42@
+flo|1|floppyEars!50@
+fra|1|fractal!10@
+pow|1|power!58@
+rea|3|readInString!66@readInString!74@readInString!34@
+rep|1|replaceWithSpace!66@
+roo|1|root!11@
+sum|2|sum1!82@sumOfDigits!90@
+w|1|w!11@
+-- END TREE
+-- START TREE 2
+0
+-- END TREE
