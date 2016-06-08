@@ -14,11 +14,7 @@ class Character:
     
     def moveChar(self, canv):
         self.cr_char(canv, self.positionOfChar[0], self.positionOfChar[1])
-#         
-#     def removeChar(self,canv, direction, value):
-#         if direction == "upDown":
-#             self.canvas.destroy(self.positionOfChar[0]*72+37,(self.positionOfChar[1]-value)*72+37)
-#         
+
 class Boss(Character):
     def __init__(self):
         self.charType = tkinter.PhotoImage(file = "assets/boss.png")
@@ -38,18 +34,7 @@ class Hero(Character):
             else:
                 pass
         return self.position  
-    
-#     def setImage(self, directionValue):
-#         if directionValue == 10: 
-#             self.image = "hero-down"
-#         elif directionValue == -10:
-#             self.image = "hero-up"
-#         elif directionValue == -1:
-#             self.image = "hero-left"
-#         elif directionValue == 1:
-#             self.image = "hero-right"
-            
-        
+ 
 class Skeleton(Character):
     def __init__(self):
         self.charType = tkinter.PhotoImage(file = "assets/skeleton.png")     

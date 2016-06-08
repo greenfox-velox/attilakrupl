@@ -1,4 +1,4 @@
-from tkinter import Tk, Canvas
+from tkinter import Tk, Canvas, PhotoImage
 from map import Map, MapData
 from character import Hero
 
@@ -19,6 +19,7 @@ def moveTheCharDown(event):
         if my_coord[pos+10].get("t") == 0 and pos+10 < 110:
             my_coord[pos]["h"] = 0
             my_coord[pos+10]["h"] = 1
+            my_hero.charType = PhotoImage(file = "assets/hero-down.png")
     except:
         pass
     my_map.SetTiles(canvas, my_coord, my_hero)
@@ -31,7 +32,7 @@ def moveTheCharUp(event):
         if my_coord[pos-10].get("t") == 0 and pos-10 >= 0:
             my_coord[pos]["h"] = 0
             my_coord[pos-10]["h"] = 1
-            my_hero.image = "hero-up"
+            my_hero.charType = PhotoImage(file = "assets/hero-up.png")
     except:
         pass
     my_map.SetTiles(canvas, my_coord, my_hero)
@@ -44,6 +45,7 @@ def moveTheCharLeft(event):
         if my_coord[pos-1].get("t") == 0 and pos % 10 > 0:
             my_coord[pos]["h"] = 0
             my_coord[pos-1]["h"] = 1
+            my_hero.charType = PhotoImage(file = "assets/hero-left.png")
     except:
         pass
     my_map.SetTiles(canvas, my_coord, my_hero)
@@ -56,6 +58,7 @@ def moveTheCharRight(event):
         if my_coord[pos+1].get("t") == 0 and pos % 10 < 9:
             my_coord[pos]["h"] = 0
             my_coord[pos+1]["h"] = 1
+            my_hero.charType = PhotoImage(file = "assets/hero-right.png")
     except:
         pass
     my_map.SetTiles(canvas, my_coord, my_hero)
