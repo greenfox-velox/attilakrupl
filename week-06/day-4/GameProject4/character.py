@@ -29,7 +29,7 @@ class Hero(Character):
     def findPosition(self, map1):
         self.position = 0
         for i in range(len(map1)):
-            if map1[i].get("h") == 1:
+            if map1[i].get("c") in (2,5,6):
                 self.position = i
             else:
                 pass

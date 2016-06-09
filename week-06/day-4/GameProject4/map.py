@@ -1,5 +1,6 @@
 import character
 import tkinter
+import stats
 
 class Tile:
     
@@ -41,15 +42,15 @@ class MapData:
         for i in range(len(self.game_map)):
             for j in range(len(self.game_map[i])):
                 if self.game_map[i][j] == 0:
-                    map_coordinates.append({"x":i, "y": j, "t":0, "h":0, "b":0, "s":0})
+                    map_coordinates.append({"x":i, "y": j, "c":0})
                 elif self.game_map[i][j] == 1:
-                    map_coordinates.append({"x":i, "y": j, "t":1, "h":0, "b":0, "s":0})
+                    map_coordinates.append({"x":i, "y": j, "c":1})
                 elif self.game_map[i][j] == 2:
-                    map_coordinates.append({"x":i, "y": j, "t":0, "h":1, "b":0, "s":0})
+                    map_coordinates.append({"x":i, "y": j, "c":2})
                 elif self.game_map[i][j] == 3:
-                    map_coordinates.append({"x":i, "y": j, "t":0, "h":0, "b":1, "s":0})
+                    map_coordinates.append({"x":i, "y": j, "c":3})
                 elif self.game_map[i][j] == 4:
-                    map_coordinates.append({"x":i, "y": j, "t":0, "h":0, "b":0, "s":1})
+                    map_coordinates.append({"x":i, "y": j, "c":4})
         return map_coordinates
 
 class Map:
@@ -61,28 +62,33 @@ class Map:
         self.wall = Wall()
         self.boss = character.Boss()
         self.skeleton = character.Skeleton()
-    
-    def SetTiles(self, canvas, game_map, hero):
+        self.stats = stats.Stats()
+            
+    def SetTiles(self, canvas, game_map, hero, charstats):
+        canvas.delete("all")
         for j in range(self.tiles+1):
             for i in range(self.tiles):
-                if game_map[j*self.tiles+i].get("t")== 0:
+                self.stats.text(charstats,canvas)
+                if game_map[j*self.tiles+i].get("c")== 0:
                     self.floor.cr_image(canvas,i,j)
-                elif game_map[j*self.tiles+i].get("t")== 1:
+                elif game_map[j*self.tiles+i].get("c")== 1:
                     self.wall.cr_image(canvas,i,j)
-                else: 
-                    pass
-                              
-                if game_map[j*self.tiles+i].get("b")== 1:
+                elif game_map[j*self.tiles+i].get("c")== 2:
+                    self.floor.cr_image(canvas,i,j)
+                    hero.cr_char(canvas, i, j)
+                elif game_map[j*self.tiles+i].get("c")== 3:
+                    self.floor.cr_image(canvas,i,j)
                     self.boss.cr_char(canvas, i, j)
-                else:
-                    pass
-                
-                if game_map[j*self.tiles+i].get("s")== 1:
+                elif game_map[j*self.tiles+i].get("c")== 4:
+                    self.floor.cr_image(canvas,i,j)
                     self.skeleton.cr_char(canvas, i, j)
-                else:
-                    pass
-                
-                if game_map[j*self.tiles+i].get("h")== 1:
+                elif game_map[j*self.tiles+i].get("c")== 5:
+                    self.floor.cr_image(canvas,i,j)
+                    self.boss.cr_char(canvas, i, j)
+                    hero.cr_char(canvas, i, j)
+                elif game_map[j*self.tiles+i].get("c")== 6:
+                    self.floor.cr_image(canvas,i,j)
+                    self.skeleton.cr_char(canvas, i, j)
                     hero.cr_char(canvas, i, j)
                 else:
                     pass
