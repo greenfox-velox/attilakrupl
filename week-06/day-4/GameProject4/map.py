@@ -1,6 +1,5 @@
 import character
 import tkinter
-import stats
 
 class Tile:
     
@@ -62,13 +61,13 @@ class Map:
         self.wall = Wall()
         self.boss = character.Boss()
         self.skeleton = character.Skeleton()
-        self.stats = stats.Stats()
-            
-    def SetTiles(self, canvas, game_map, hero, charstats):
+     
+    def SetTiles(self, canvas, game_map, hero):
         canvas.delete("all")
+        self.hero = hero
+        self.hero.printStats(self.hero.generate_stats_line(), canvas)
         for j in range(self.tiles+1):
             for i in range(self.tiles):
-                self.stats.text(charstats,canvas)
                 if game_map[j*self.tiles+i].get("c")== 0:
                     self.floor.cr_image(canvas,i,j)
                 elif game_map[j*self.tiles+i].get("c")== 1:

@@ -1,19 +1,26 @@
 from tkinter import Tk, Canvas
 from map import Map, MapData
-from character import Hero
+from character import Hero, Boss, Skeleton
 from movement import Movement
 
 def main():
     root = Tk()
-    canvas = Canvas(root, bg='grey', width=720, height=900)
+    canvas = Canvas(root, bg='white', width=720, height=900)
     canvas.pack()
-    charstats = ("Hero (Level 1) HP: 8/10 | DP: 8 | SP: 6")
+#     level = 1
+   
     #Create objects:
     my_hero = Hero()
+    my_boss = Boss()
+    my_skeleton1 = Skeleton()
+    my_skeleton2 = Skeleton()
+    my_skeleton3 = Skeleton()
+
     my_coord = MapData().generate_coordinate_list()
     my_map = Map()
-    my_map.SetTiles(canvas, my_coord, my_hero, charstats)
-    movements = Movement(my_hero, my_coord, my_map, canvas, charstats)
+    my_map.SetTiles(canvas, my_coord, my_hero)
+    movements = Movement(my_hero, my_coord, my_map, canvas)
+    
     
     
     #Add action to buttons: 
