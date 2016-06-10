@@ -18,7 +18,7 @@ class Movement:
                 self.my_hero.charType = PhotoImage(file = "assets/hero-down.png")
         except:
             pass
-        self.my_map.SetTiles(self.canvas, self.my_coord, self.my_hero)
+        self.my_map.SetGameScreen(self.canvas, self.my_coord, self.my_hero)
     
     def moveTheCharUp(self,event):
         pos = self.my_hero.findPosition(self.my_coord)
@@ -29,7 +29,7 @@ class Movement:
                 self.my_hero.charType = PhotoImage(file = "assets/hero-up.png")
         except:
             pass
-        self.my_map.SetTiles(self.canvas, self.my_coord, self.my_hero)
+        self.my_map.SetGameScreen(self.canvas, self.my_coord, self.my_hero)
         
     def moveTheCharLeft(self,event):
         pos = self.my_hero.findPosition(self.my_coord)
@@ -40,7 +40,7 @@ class Movement:
                 self.my_hero.charType = PhotoImage(file = "assets/hero-left.png")
         except:
             pass
-        self.my_map.SetTiles(self.canvas, self.my_coord, self.my_hero)
+        self.my_map.SetGameScreen(self.canvas, self.my_coord, self.my_hero)
         
     def moveTheCharRight(self,event):
         pos = self.my_hero.findPosition(self.my_coord)
@@ -51,4 +51,4 @@ class Movement:
                 self.my_hero.charType = PhotoImage(file = "assets/hero-right.png")
         except:
             pass
-        self.my_map.SetTiles(self.canvas, self.my_coord, self.my_hero)
+        self.my_map.SetGameScreen(self.canvas, self.my_coord, self.my_hero)

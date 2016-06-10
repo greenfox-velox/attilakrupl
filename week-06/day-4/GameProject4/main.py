@@ -2,6 +2,7 @@ from tkinter import Tk, Canvas
 from map import Map, MapData
 from character import Hero, Boss, Skeleton
 from movement import Movement
+# from battle import Battle
 
 def main():
     root = Tk()
@@ -12,13 +13,14 @@ def main():
     #Create objects:
     my_hero = Hero()
     my_boss = Boss()
+ 
     my_skeleton1 = Skeleton()
     my_skeleton2 = Skeleton()
     my_skeleton3 = Skeleton()
 
     my_coord = MapData().generate_coordinate_list()
     my_map = Map()
-    my_map.SetTiles(canvas, my_coord, my_hero)
+    my_map.SetGameScreen(canvas, my_coord, my_hero)
     movements = Movement(my_hero, my_coord, my_map, canvas)
     
     
@@ -32,6 +34,8 @@ def main():
     canvas.bind("<Up>", movements.moveTheCharUp)
     canvas.bind("<Left>", movements.moveTheCharLeft)
     canvas.bind("<Right>", movements.moveTheCharRight)
+#     canvas.bind("<space>", battle.Battle)
+    
     canvas.pack()
     canvas.focus_set()
 

@@ -27,7 +27,7 @@ class Character:
         return stats_line
     
     def printStats(self, stat_line, canvas):
-        canvas.create_text(350,870, fill="black", font="Arial 15", text=stat_line)
+        canvas.create_text(350,800, fill="black", font="Arial 15", text=stat_line)
         canvas.update
         
 class Hero(Character):
@@ -52,7 +52,7 @@ class Hero(Character):
         return self.position  
     
     def printStats(self, stat_line, canvas):
-        canvas.create_text(350,820, fill="black", font="Arial 15", text=stat_line)
+        canvas.create_text(350,750, fill="black", font="Arial 15", text=stat_line)
         canvas.update
          
 class Boss(Character):

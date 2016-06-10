@@ -31,10 +31,10 @@ class MapData:
                         [1,1,1,1,0,1,1,1,1,0],
                         [0,1,0,1,0,0,0,0,1,4],
                         [0,1,0,1,0,1,1,0,1,0],
-                        [0,0,0,4,0,1,1,0,1,0],
+                        [0,0,0,4,0,1,1,0,0,0],
                         [0,1,1,1,0,0,4,0,1,0],
                         [0,0,0,1,0,1,1,0,1,0],
-                        [0,1,0,1,0,1,0,0,0,0]] 
+                        ] 
         
     def generate_coordinate_list(self):
         map_coordinates = []
@@ -61,12 +61,12 @@ class Map:
         self.wall = Wall()
         self.boss = character.Boss()
         self.skeleton = character.Skeleton()
-     
-    def SetTiles(self, canvas, game_map, hero):
+        self.hero = character.Hero()
+    
+    def SetGameScreen(self, canvas, game_map, hero):
         canvas.delete("all")
-        self.hero = hero
         self.hero.printStats(self.hero.generate_stats_line(), canvas)
-        for j in range(self.tiles+1):
+        for j in range(self.tiles):
             for i in range(self.tiles):
                 if game_map[j*self.tiles+i].get("c")== 0:
                     self.floor.cr_image(canvas,i,j)
@@ -85,10 +85,12 @@ class Map:
                     self.floor.cr_image(canvas,i,j)
                     self.boss.cr_char(canvas, i, j)
                     hero.cr_char(canvas, i, j)
+                    self.boss.printStats(self.boss.generate_stats_line(), canvas)
                 elif game_map[j*self.tiles+i].get("c")== 6:
                     self.floor.cr_image(canvas,i,j)
                     self.skeleton.cr_char(canvas, i, j)
                     hero.cr_char(canvas, i, j)
+                    self.skeleton.printStats(self.skeleton.generate_stats_line(), canvas)
                 else:
                     pass
               
