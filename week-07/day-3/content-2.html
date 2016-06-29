@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Workshop: innerHTML, textContent</title>
+</head>
+<body>
+  <p class="apple">apple</p>
+  <p class="balloon">banana</p>
+  <p class="cat">car</p>
+  <p class="dog">dolphin</p>
+
+  <script>
+    var n = document.querySelectorAll('p').length;
+    for (var m = n-1; m >= 0; m--){
+      document.querySelectorAll('p')[m].innerHTML = document.querySelectorAll('p')[n-1].innerHTML
+    }
+  </script>
+  <script src="content-2.js"></script>
+</body>
+</html>
