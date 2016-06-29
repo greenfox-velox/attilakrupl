@@ -1,6 +1,6 @@
 
-###Booyakasha, big up yourself Visitor!
+###Welcome to my github page!  
 
 ---
 
-Here you can reach out for the original [velox-syllabus] (https://github.com/attilakrupl/velox-syllabus).
+Please follow my coding process at [Codewars.com] (https://www.codewars.com/users/attilakrupl`).
