@@ -3,4 +3,4 @@
 
 ---
 
-Please follow my coding process at [Codewars.com] (https://www.codewars.com/users/attilakrupl`).
+Please follow my coding process at [Codewars.com] (https://www.codewars.com/users/attilakrupl).
