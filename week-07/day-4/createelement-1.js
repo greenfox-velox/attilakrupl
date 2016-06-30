@@ -1,3 +1,4 @@
+'use strict';
 // Add an item that says 'The Green Fox' to the asteroid list.
 const asteroidList = document.querySelector('ul.asteroids');
 const newAsteroid = document.createElement('li');
