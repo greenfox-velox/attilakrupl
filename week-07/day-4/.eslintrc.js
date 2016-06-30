@@ -1,0 +1,15 @@
+module.exports = {
+    "extends": "airbnb",
+    "installedESLint": true,
+    "plugins": [
+        "react"
+    ],
+    "modules": false,
+    "rules": {
+      // "no-var": "off",
+      "no-console": "off",
+      "no-alert": "off",
+      "strict": "off",
+      "vars-on-top": "off",
+    }
+};
