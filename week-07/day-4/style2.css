@@ -2,18 +2,20 @@ header, footer, main {
     display: flex;
     width: 700px;
     margin: 0 auto;
-
 }
 
 aside {
-    width: 50px;
+    width: 50px;ó
     height: auto;
-    border: 1px solid black;
     display: flex;
 }
 
 .content, .content2 {
   width: 600px;
+}
+
+header, main {
+  border-bottom: 1px solid black;
 }
 
 header {
@@ -48,23 +50,33 @@ button {
 }
 
 .right-arrow {
-    background-image: url(ar.jpg);
+    background-image: url(rescources/ar.png);
 }
 
 .left-arrow {
-    background-image: url(al.jpg);
+    background-image: url(rescources/al.png);
 }
 
 .content2 {
   height: inherit;
   text-align: center;
+  padding-top: 5px;
+}
+
+.highlighted {
+  border: 2px solid #0099FF;
 }
 
 .main-image {
   max-height: 97%;
+
 }
 
 .thumbnail {
   max-width: 110px;
+  max-height: 90px;
   align-content: center;
+  padding-left: 5px;
+  padding-right: 5px;
+
 }
