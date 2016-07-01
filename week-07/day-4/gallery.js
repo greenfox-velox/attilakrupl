@@ -1,19 +1,4 @@
 'use strict';
-// const fs = require('fs');
-// function getFiles(dir) {
-//   const fileList = [];
-//   const files = fs.readdirSync(dir);
-//   for (var i in files) {
-//     if (!files.hasOwnProperty(i)) continue;
-//     const name = dir+'/'+files[i];
-//     if (!fs.statSync(name).isDirectory()) {
-//       fileList.push(name);
-//     }
-//   }
-//   return fileList;
-// }
-// const fileList = getFiles('/images');
-// console.log(fileList);
 let imageCounter = 0;
 let thumbCounter = 0;
 const fileList = ['Ceres-Bright-Spot',
@@ -31,11 +16,9 @@ const bigButtonLeft = document.querySelector('#button1');
 const bigButtonRight = document.querySelector('#button2');
 const smallButtonLeft = document.querySelector('#button3');
 const smallButtonRight = document.querySelector('#button4');
-// const thumb1 = document.querySelector('#thumb1');
-// const thumb2 = document.querySelector('#thumb2');
-// const thumb3 = document.querySelector('#thumb3');
-// const thumb4 = document.querySelector('#thumb4');
-// const thumb5 = document.querySelector('#thumb5');
+const thumbList = [];
+const imageList = document.querySelectorAll('.thumbnail');
+
 
 function fileNameGenerator(num) {
   const fileName = fileList[((imageCounter) + num) % numOfImages];
@@ -54,9 +37,9 @@ function setName() {
 function setImages() {
   document.querySelectorAll('.main-image')[0].setAttribute('src', fileNameGenerator(0));
   for (let i = 0; i < 5; i++) {
-    document.querySelectorAll('.thumbnail')[i].setAttribute('src', fileNameGenerator(i));
+    document.querySelectorAll('.thumbnail')[i].setAttribute('src', thumbNameGenerator(i));
+    thumbList[i] = thumbNameGenerator(i);
   }
-  document.querySelectorAll('.thumbnail')[0].classList.add('highlighted');
 }
 
 function moveImages() {
@@ -67,9 +50,9 @@ function moveImages() {
 function moveThumbs() {
   for (let i = 0; i < 5; i++) {
     document.querySelectorAll('.thumbnail')[i].setAttribute('src', thumbNameGenerator(i));
+    thumbList[i] = thumbNameGenerator(i);
   }
 }
-
 
 function goLeft() {
   if (imageCounter > 0) {
@@ -103,12 +86,15 @@ function thumbRight() {
   moveThumbs();
 }
 
-// function highlightThumb(id) {
-//   for (let i in document.querySelectorAll('.thumbnail')) {
-//     i.classList.remove('highlighted');
-//   }
-//   document.querySelector(id).classList.add('highlighted');
-// }
+function thumbOnClick(i) {
+  return function() {
+    document.querySelectorAll('.main-image')[0].setAttribute('src', imageList[i].src);
+    const nameArr = document.querySelectorAll('.main-image')[0].src.split('/');
+    const res = (nameArr[nameArr.length - 1]).split('.')[0];
+    document.querySelector('.image_name').textContent = res;
+  };
+}
+
 
 setImages();
 setName();
@@ -116,4 +102,6 @@ bigButtonLeft.addEventListener('click', goLeft);
 bigButtonRight.addEventListener('click', goRight);
 smallButtonLeft.addEventListener('click', thumbLeft);
 smallButtonRight.addEventListener('click', thumbRight);
-// thumb1.addEventListener('click', goLeft);
+for (let i = 0; i < 5; i++) {
+  imageList[i].addEventListener('click', thumbOnClick(i));
+}
