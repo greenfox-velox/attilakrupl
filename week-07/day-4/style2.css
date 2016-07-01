@@ -5,7 +5,7 @@ header, footer, main {
 }
 
 aside {
-    width: 50px;ó
+    width: 50px;
     height: auto;
     display: flex;
 }
@@ -53,6 +53,18 @@ button {
     background-repeat: no-repeat;
 }
 
+button:focus{
+  outline:0;
+}
+
+#button3, #button4 {
+    background-size: 50% 50%;
+}
+
+#button3 {
+  margin-left: 25px;
+}
+
 .right-arrow {
     background-image: url(rescources/ar.png);
 }
@@ -68,12 +80,11 @@ button {
 }
 
 .highlighted {
-  border: 2px solid #0099FF;
+  border: 3px solid #0099FF;
 }
 
 .main-image {
   max-height: 97%;
-
 }
 
 .thumbnail {
@@ -82,5 +93,4 @@ button {
   align-content: center;
   padding-left: 5px;
   padding-right: 5px;
-
 }

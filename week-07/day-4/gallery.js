@@ -18,6 +18,7 @@ const smallButtonLeft = document.querySelector('#button3');
 const smallButtonRight = document.querySelector('#button4');
 const thumbList = [];
 const imageList = document.querySelectorAll('.thumbnail');
+let highlighted = 0;
 
 
 function fileNameGenerator(num) {
@@ -35,22 +36,32 @@ function setName() {
 }
 
 function setImages() {
-  document.querySelectorAll('.main-image')[0].setAttribute('src', fileNameGenerator(0));
+  document.querySelectorAll('.main-image')[0].setAttribute('src', fileNameGenerator(highlighted));
   for (let i = 0; i < 5; i++) {
     document.querySelectorAll('.thumbnail')[i].setAttribute('src', thumbNameGenerator(i));
     thumbList[i] = thumbNameGenerator(i);
   }
+  document.querySelectorAll('.thumbnail')[highlighted].classList.add('highlighted');
+}
+
+function highLight(n){
+  document.querySelectorAll('.thumbnail')[highlighted].classList.remove('highlighted');
+  highlighted = n;
+  document.querySelectorAll('.thumbnail')[highlighted].classList.add('highlighted');
 }
 
 function moveImages() {
+  highLight(0);
   document.querySelectorAll('.main-image')[0].setAttribute('src', fileNameGenerator(0));
   thumbCounter = imageCounter;
 }
 
 function moveThumbs() {
+  var thumbs = document.querySelectorAll('.thumbnail');
   for (let i = 0; i < 5; i++) {
-    document.querySelectorAll('.thumbnail')[i].setAttribute('src', thumbNameGenerator(i));
+    thumbs[i].setAttribute('src', thumbNameGenerator(i));
     thumbList[i] = thumbNameGenerator(i);
+    // thumbs[i].setAttribute('data-id', i);
   }
 }
 
@@ -88,13 +99,14 @@ function thumbRight() {
 
 function thumbOnClick(i) {
   return function() {
+    highLight(i)
     document.querySelectorAll('.main-image')[0].setAttribute('src', imageList[i].src);
+
     const nameArr = document.querySelectorAll('.main-image')[0].src.split('/');
     const res = (nameArr[nameArr.length - 1]).split('.')[0];
     document.querySelector('.image_name').textContent = res;
   };
 }
-
 
 setImages();
 setName();
