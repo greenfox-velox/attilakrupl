@@ -1,5 +1,5 @@
 
-###Welcome to my github page!  
+##Welcome to my github page!  
 
 ---
 You can find my HTML, CSS, Python and JavaScript projects uploaded here.
@@ -10,7 +10,7 @@ Please endorse my skills on [![Gallery ScreenShot](/rescources/LI2.jpg?raw=true 
 
 ---
 
-####Some of my works:
+###My JavaScript Projects:
 
 Have a look at my [NASA JPL Gallery] (http://attilakrupl.github.io/gallery/).
 
