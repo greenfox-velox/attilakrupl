@@ -18,7 +18,7 @@ const smallButtonLeft = document.querySelector('#button3');
 const smallButtonRight = document.querySelector('#button4');
 const thumbList = [];
 const imageList = document.querySelectorAll('.thumbnail');
-let highlighted = 0;
+let highlightedThumb = 0;
 
 
 function fileNameGenerator(num) {
@@ -36,18 +36,19 @@ function setName() {
 }
 
 function setImages() {
-  document.querySelectorAll('.main-image')[0].setAttribute('src', fileNameGenerator(highlighted));
+  document.querySelectorAll('.main-image')[0].setAttribute('src', fileNameGenerator(highlightedThumb));
   for (let i = 0; i < 5; i++) {
     document.querySelectorAll('.thumbnail')[i].setAttribute('src', thumbNameGenerator(i));
     thumbList[i] = thumbNameGenerator(i);
   }
-  document.querySelectorAll('.thumbnail')[highlighted].classList.add('highlighted');
+  document.querySelectorAll('.thumbnail')[highlightedThumb].classList.add('highlighted');
 }
 
-function highLight(n){
-  document.querySelectorAll('.thumbnail')[highlighted].classList.remove('highlighted');
-  highlighted = n;
-  document.querySelectorAll('.thumbnail')[highlighted].classList.add('highlighted');
+function highLight(n) {
+  let thumbs = document.querySelectorAll('.thumbnail');
+  thumbs[highlightedThumb].classList.remove('highlighted');
+  highlightedThumb = n;
+  thumbs[highlightedThumb].classList.add('highlighted');
 }
 
 function moveImages() {

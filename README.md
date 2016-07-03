@@ -10,11 +10,10 @@ Please endorse my skills on [LinkedIn] (https://hu.linkedin.com/in/attila-krupl-
 
 ---
 
-##Some of my works: 
+####Some of my works:
 
 Have a look at my [NASA JPL Gallery] (http://attilakrupl.github.io/gallery/).
 
+![Gallery ScreenShot](http://attilakrupl.github.io/gallery/rescources/gallSS.jpg "Optional title")
+
 ---
-
-
-
