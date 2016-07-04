@@ -9,8 +9,9 @@ Please follow my coding process on [![Gallery ScreenShot](/rescources/CW2.jpg?ra
 Please endorse my skills on [![Gallery ScreenShot](/rescources/LI2.jpg?raw=true "LinkedIn")] (https://hu.linkedin.com/in/attila-krupl-a1b43750).
 
 ---
+---
 
-## My most recent projects(latest first)
+## My most recent projects(latest first):
 
 ###My JavaScript Projects:
 
