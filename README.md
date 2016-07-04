@@ -10,10 +10,18 @@ Please endorse my skills on [![Gallery ScreenShot](/rescources/LI2.jpg?raw=true 
 
 ---
 
+## My most recent projects(latest first)
+
 ###My JavaScript Projects:
 
 Have a look at my [NASA JPL Gallery] (http://attilakrupl.github.io/gallery/).
 
-![Gallery ScreenShot](http://attilakrupl.github.io/gallery/rescources/gallSS.jpg "Gallery")
+![Gallery ScreenShot](/rescources/gallSS.jpg "Gallery")
 
 ---
+
+###My Python Projects:
+
+Recursion: [Fractals in Python] (https://github.com/greenfox-velox/attilakrupl/tree/master/week-04/day-6/circles.py).
+
+![Circular Fractal ScreenShot](/rescources/FRcircle.jpg "Circular Fractal")
