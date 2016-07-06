@@ -20,8 +20,9 @@ function doubleContent(readFileName, writeFileName, cb) {
       if (error) {
         return cb(error);
       }
+      cb(null);
     });
-    cb(null);
+
   });
 }
 doubleContent('alma.txt', 'alma2.txt', error => {
