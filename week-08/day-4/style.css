@@ -100,8 +100,12 @@ p {
   background-image: url(rescources/bin.jpg);
 }
 
-.checkbox {
+#unchecked {
   background-image: url(rescources/chck_e.jpg);
+}
+
+#checked {
+  background-image: url(rescources/chck_f.jpg);
 }
 
 footer {
