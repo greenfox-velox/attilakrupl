@@ -6,7 +6,7 @@ module.exports = {
     ],
     "modules": false,
     "rules": {
-      // "no-var": "off",
+      "no-var": "off",
       "no-console": "off",
       "no-alert": "off",
       "strict": "off",
