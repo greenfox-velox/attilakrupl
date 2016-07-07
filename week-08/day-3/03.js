@@ -22,7 +22,6 @@ function doubleContent(readFileName, writeFileName, cb) {
       }
       cb(null);
     });
-
   });
 }
 doubleContent('alma.txt', 'alma2.txt', error => {
