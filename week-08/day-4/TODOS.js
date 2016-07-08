@@ -3,12 +3,12 @@
 var addButton = document.querySelector('.add_task');
 var childList = [];
 
-
 function createTaskElements(e) {
   var task = document.createElement('div');
   var todoItem = document.createElement('div');
   var dothis = document.createElement('p');
   var imgCont = document.createElement('div');
+  var edit = document.createElement('button');
   var bin = document.createElement('button');
   var chckbx = document.createElement('button');
 
@@ -17,6 +17,9 @@ function createTaskElements(e) {
   dothis.setAttribute('id', 't' + e.id)
   dothis.className = e.completed ? 'check' : '';
   imgCont.className = 'img_cont';
+  edit.className = 'edit';
+  edit.setAttribute('id', e.id);
+  edit.addEventListener('click', editTask);
   bin.className = 'bin';
   bin.setAttribute('id', e.id);
   bin.addEventListener('click', removeTask);
@@ -24,6 +27,7 @@ function createTaskElements(e) {
   chckbx.addEventListener('click', checkUncheck);
   chckbx.setAttribute('id', e.id);
 
+  imgCont.appendChild(edit);
   imgCont.appendChild(bin);
   imgCont.appendChild(chckbx);
   todoItem.appendChild(dothis);
@@ -34,12 +38,16 @@ function createTaskElements(e) {
   childList.push(task);
 }
 
-function dispCont() {
+function clearScreenContent() {
+  var myNode = document.querySelector('.tasks');
+  myNode.innerHTML = '';
+}
+
+function displayContent() {
   var xhr = new XMLHttpRequest();
   xhr.onload = function() {
     var all = JSON.parse(xhr.responseText);
-    var myNode = document.querySelector('.tasks');
-    myNode.innerHTML = '';
+    clearScreenContent();
     all.forEach((e) => {
       createTaskElements(e);
     });
@@ -56,7 +64,7 @@ function removeTask() {
   xhr.setRequestHeader('content-type', 'application/json; charset=utf-8');
   xhr.onload = function() {
     if (xhr.readyState === 4) {
-      dispCont();
+      displayContent();
     }
   };
   xhr.send();
@@ -78,7 +86,7 @@ function checkUncheck() {
   xhr.setRequestHeader('content-type', 'application/json; charset=utf-8');
   xhr.onload = function() {
     if (xhr.readyState === 4) {
-      dispCont();
+      displayContent();
     }
   };
   xhr.send(JSONReq);
@@ -93,11 +101,36 @@ function addTask() {
   xhr.setRequestHeader('content-type', 'application/json; charset=utf-8');
   xhr.onload = function() {
     if (xhr.readyState === 4) {
-      dispCont();
+      displayContent();
     }
   };
   xhr.send(newTask);
 }
 
-dispCont();
+function editTask() {
+  var xhr = new XMLHttpRequest();
+  var id = event.target.id;
+  var readyOrNot = event.target.classList[1];
+  var setToThis = readyOrNot === 'checked' ? true : false;
+  var text = document.querySelector('#t' + event.target.id).innerHTML;
+  var changeTaskToThis = prompt('Enter the updated task!', text);
+  var request = {
+    'text': changeTaskToThis,
+    'completed': setToThis,
+  };
+  var JSONReq = JSON.stringify(request);
+  var reqURL = 'https://mysterious-dusk-8248.herokuapp.com/todos/' + id;
+  xhr.open('PUT', reqURL);
+  xhr.setRequestHeader('content-type', 'application/json; charset=utf-8');
+  xhr.onload = function() {
+    if (xhr.readyState === 4) {
+      displayContent();
+    }
+  };
+  xhr.send(JSONReq);
+}
+
+displayContent();
 addButton.addEventListener('click', addTask);
+
+// <a href=https://facebook.com/profile.php?=73322363>Look at this idiot</a>
