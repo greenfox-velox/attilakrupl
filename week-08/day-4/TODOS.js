@@ -1,51 +1,78 @@
 'use strict';
 
 var addButton = document.querySelector('.add_task');
+var childList = [];
+
+
+function createTaskElements(e) {
+  var task = document.createElement('div');
+  var todoItem = document.createElement('div');
+  var dothis = document.createElement('p');
+  var imgCont = document.createElement('div');
+  var bin = document.createElement('button');
+  var chckbx = document.createElement('button');
+
+  task.setAttribute('id', e.id);
+  dothis.innerHTML = e.text;
+  imgCont.className = 'img_cont';
+  bin.className = 'bin';
+  bin.setAttribute('id', e.id);
+  bin.addEventListener('click', removeTask);
+  chckbx.className = 'checkbox ' + e.id;
+  chckbx.setAttribute('id', e.completed ? 'checked' : 'unchecked');
+
+  imgCont.appendChild(bin);
+  imgCont.appendChild(chckbx);
+  todoItem.appendChild(dothis);
+  task.appendChild(todoItem);
+  task.appendChild(imgCont);
+  document.querySelector('.tasks').appendChild(task);
+  childList.push(task);
+}
 
 function dispCont() {
   var xhr = new XMLHttpRequest();
   xhr.onload = function() {
     var all = JSON.parse(xhr.responseText);
+    var myNode = document.querySelector('.tasks');
+    myNode.innerHTML = '';
     all.forEach((e) => {
-      var task = document.createElement('div');
-      var todo_item = document.createElement('div');
-      var dothis = document.createElement('p');
-      var img_cont = document.createElement('div');
-      var img1 = document.createElement('div');
-      var bin = document.createElement('button');
-      var img2 = document.createElement('div');
-      var chckbx = document.createElement('button');
-
-      task.className = 'task';
-      task.setAttribute('id', e.id);
-      todo_item.className = 'todo-item';
-      dothis.innerHTML = e.text;
-      img_cont.className = 'img_cont';
-      bin.className = 'bin';
-      bin.setAttribute('alt', 'bin');
-      chckbx.className = 'checkbox';
-      if (e.completed === false) {
-        chckbx.setAttribute('id', 'unchecked');
-        chckbx.setAttribute('alt', 'unchecked');
-      } else {
-        chckbx.setAttribute('id', 'checked');
-        chckbx.setAttribute('alt', 'checked');
-      }
-
-      img2.appendChild(chckbx);
-      img1.appendChild(bin);
-      img_cont.appendChild(img1);
-      img_cont.appendChild(img2);
-      todo_item.appendChild(dothis);
-      task.appendChild(todo_item);
-      task.appendChild(img_cont);
-      document.querySelector('.tasks').appendChild(task);
+      createTaskElements(e);
     });
   };
   xhr.open('GET', 'https://mysterious-dusk-8248.herokuapp.com/todos');
   xhr.send();
 }
 
-dispCont();
+function removeTask() {
+  console.log(event.target.id);
+  var xhr = new XMLHttpRequest();
+  var deleteID = event.target.id;
+  var reqURL = 'https://mysterious-dusk-8248.herokuapp.com/todos/' + deleteID;
+  xhr.open('DELETE', reqURL);
+  xhr.setRequestHeader('content-type', 'application/json; charset=utf-8');
+  xhr.onload = function() {
+    if (xhr.readyState === 4) {
+      dispCont();
+    }
+  };
+  xhr.send();
+}
 
-addButton.addEventListener('click', dispCont);
+function addTask() {
+  var xhr = new XMLHttpRequest();
+  xhr.open('POST', 'https://mysterious-dusk-8248.herokuapp.com/todos');
+  var content = document.querySelector('#content');
+  var sendThis = content.value;
+  var newTask = JSON.stringify({ text: sendThis });
+  xhr.setRequestHeader('content-type', 'application/json; charset=utf-8');
+  xhr.onload = function() {
+    if (xhr.readyState === 4) {
+      dispCont();
+    }
+  };
+  xhr.send(newTask);
+}
+
+dispCont();
+addButton.addEventListener('click', addTask);
