@@ -14,12 +14,15 @@ function createTaskElements(e) {
 
   task.setAttribute('id', e.id);
   dothis.innerHTML = e.text;
+  dothis.setAttribute('id', 't' + e.id)
+  dothis.className = e.completed ? 'check' : '';
   imgCont.className = 'img_cont';
   bin.className = 'bin';
   bin.setAttribute('id', e.id);
   bin.addEventListener('click', removeTask);
-  chckbx.className = 'checkbox ' + e.id;
-  chckbx.setAttribute('id', e.completed ? 'checked' : 'unchecked');
+  chckbx.className = 'checkbox ' + (e.completed ? 'checked' : 'unchecked');
+  chckbx.addEventListener('click', checkUncheck);
+  chckbx.setAttribute('id', e.id);
 
   imgCont.appendChild(bin);
   imgCont.appendChild(chckbx);
@@ -27,6 +30,7 @@ function createTaskElements(e) {
   task.appendChild(todoItem);
   task.appendChild(imgCont);
   document.querySelector('.tasks').appendChild(task);
+
   childList.push(task);
 }
 
@@ -45,7 +49,6 @@ function dispCont() {
 }
 
 function removeTask() {
-  console.log(event.target.id);
   var xhr = new XMLHttpRequest();
   var deleteID = event.target.id;
   var reqURL = 'https://mysterious-dusk-8248.herokuapp.com/todos/' + deleteID;
@@ -57,6 +60,28 @@ function removeTask() {
     }
   };
   xhr.send();
+}
+
+function checkUncheck() {
+  var xhr = new XMLHttpRequest();
+  var id = event.target.id;
+  var readyOrNot = event.target.classList[1];
+  var setToThis = readyOrNot === 'checked' ? false : true;
+  var text = document.querySelector('#t' + event.target.id).innerHTML;
+  var request = {
+    'text': text,
+    'completed': setToThis,
+  };
+  var JSONReq = JSON.stringify(request);
+  var reqURL = 'https://mysterious-dusk-8248.herokuapp.com/todos/' + id;
+  xhr.open('PUT', reqURL);
+  xhr.setRequestHeader('content-type', 'application/json; charset=utf-8');
+  xhr.onload = function() {
+    if (xhr.readyState === 4) {
+      dispCont();
+    }
+  };
+  xhr.send(JSONReq);
 }
 
 function addTask() {

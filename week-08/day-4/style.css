@@ -99,12 +99,16 @@ p {
   background-image: url(rescources/bin.jpg);
 }
 
-#unchecked {
+.unchecked {
   background-image: url(rescources/chck_e.jpg);
 }
 
-#checked {
+.checked {
   background-image: url(rescources/chck_f.jpg);
+  }
+
+.check {
+  color: #cecece;
 }
 
 footer {
