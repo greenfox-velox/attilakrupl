@@ -122,12 +122,12 @@ function editTask() {
   var reqURL = 'https://mysterious-dusk-8248.herokuapp.com/todos/' + id;
   xhr.open('PUT', reqURL);
   xhr.setRequestHeader('content-type', 'application/json; charset=utf-8');
+  xhr.send(JSONReq);
   xhr.onload = function() {
     if (xhr.readyState === 4) {
       displayContent();
     }
   };
-  xhr.send(JSONReq);
 }
 
 displayContent();

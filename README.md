@@ -15,7 +15,11 @@ Please endorse my skills on [![Gallery ScreenShot](/rescources/LI2.jpg?raw=true 
 
 ###My JavaScript Projects:
 
-Have a look at my [NASA JPL Gallery] (http://attilakrupl.github.io/gallery/).
+#####[To Do App] (http://attilakrupl.github.io/todo/)
+
+![ToDo App ScreenShot](/rescources/todo.jpg "ToDo App")
+
+#####Have a look at my [NASA JPL Gallery] (http://attilakrupl.github.io/gallery/).
 
 ![Gallery ScreenShot](/rescources/gallSS.jpg "Gallery")
 
@@ -23,6 +27,6 @@ Have a look at my [NASA JPL Gallery] (http://attilakrupl.github.io/gallery/).
 
 ###My Python Projects:
 
-Recursion: [Fractals in Python] (https://github.com/greenfox-velox/attilakrupl/tree/master/week-04/day-6/circles.py).
+#####Recursion: [Fractals in Python] (https://github.com/greenfox-velox/attilakrupl/tree/master/week-04/day-6/circles.py).
 
 ![Circular Fractal ScreenShot](/rescources/FRcircle.jpg "Circular Fractal")
