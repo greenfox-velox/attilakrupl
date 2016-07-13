@@ -75,7 +75,7 @@ function checkUncheck() {
   var xhr = new XMLHttpRequest();
   var id = event.target.id;
   var readyOrNot = event.target.classList[1];
-  var setToThis = readyOrNot === 'checked' ? false : true;
+  var setToThis = readyOrNot === 'checked' ? 0 : 1;
   var text = document.querySelector('#t' + event.target.id).innerHTML;
   var request = {
     'text': text,
@@ -130,8 +130,5 @@ function editTask() {
     }
   };
 }
-
 displayContent();
 addButton.addEventListener('click', addTask);
-
-// <a href=https://facebook.com/profile.php?=73322363>Look at this idiot</a>
