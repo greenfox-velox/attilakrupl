@@ -52,7 +52,7 @@ function displayContent() {
       createTaskElements(e);
     });
   };
-  xhr.open('GET', 'https://mysterious-dusk-8248.herokuapp.com/todos');
+  xhr.open('GET', 'https://mysterious-dusk-8248.herokuapp.com/todos/');
   xhr.send();
 }
 
