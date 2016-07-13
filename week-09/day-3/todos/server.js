@@ -1,7 +1,13 @@
+const mysql = require('mysql');
 const express = require('express');
 const bodyParser = require('body-parser');
+const con = mysql.createConnection({
+  host: 'localhost',
+  user: 'root',
+  password: 'alma123',
+  database: 'todos',
+});
 const app = express();
-
 app.use(bodyParser.json());
 app.use(express.static('todo'));
 const data = [
@@ -33,7 +39,13 @@ function errorHandling(res, item) {
 }
 
 app.get('/todos', (req, res) => {
-  res.send(data);
+  con.query('SELECT * from todos;', (err, rows) => {
+  if (err) {
+    console.log(err.toString());
+    return;
+  }
+  res.send(JSON.parse(JSON.stringify(rows)));
+  });
 });
 
 app.get('/todos/:id', (req, res) => {
@@ -57,7 +69,11 @@ app.put('/todos/:id', (req, res) => {
     if (parseInt(e.id, 10) === parseInt(req.params.id, 10)) {
       return e;
     } })[0];
-  task.completed = true;
+  if (task.completed) {
+    task.completed = false;
+  } else {
+    task.completed = true;
+  }
   task.text = req.body.text;
   res.send(task);
 });
