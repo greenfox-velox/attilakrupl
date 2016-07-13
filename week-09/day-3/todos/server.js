@@ -1,37 +1,48 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const app = express();
+
 app.use(bodyParser.json());
 app.use(express.static('todo'));
 const data = [
   {
     completed: false,
     id: 1,
-    text: 'Buy milk',
+    text: 'vasarolj tejet',
   },
   {
     completed: false,
     id: 2,
-    text: 'Make dinner',
+    text: 'fozz ebedet',
   },
   {
     completed: false,
     id: 3,
-    text: 'Save the world',
+    text: 'mentsd meg a vilagot',
   },
 ];
 
 let counter = data.length;
+
+function errorHandling(res, item) {
+  if (item === undefined) {
+    res.sendStatus(404);
+  } else {
+    res.send(item);
+  }
+}
 
 app.get('/todos', (req, res) => {
   res.send(data);
 });
 
 app.get('/todos/:id', (req, res) => {
-  res.send(data.filter(e => {
+  var task = data.filter(e => {
     if (parseInt(e.id, 10) === parseInt(req.params.id, 10)) {
       return e;
-    } }));
+    } })[0];
+  console.log(task);
+  res.send(task);
 });
 
 app.post('/todos/', (req, res) => {
@@ -42,30 +53,23 @@ app.post('/todos/', (req, res) => {
 });
 
 app.put('/todos/:id', (req, res) => {
-  res.send(data.filter(e => {
+  var task = data.filter(e => {
     if (parseInt(e.id, 10) === parseInt(req.params.id, 10)) {
-      e.completed = true;
-      e.text = req.body.text;
-    } }, [0]));
+      return e;
+    } })[0];
+  task.completed = true;
+  task.text = req.body.text;
+  res.send(task);
 });
-
-
-function errorHandling(res, item) {
-  if (item === undefined) {
-    res.sendStatus(404);
-  } else {
-    res.send(item);
-  }
-}
 
 app.delete('/todos/:id', (req, res) => {
   const item = data.filter(e => {
     if (e.id === +req.params.id) {
-      e.destroyed = true;
-      data.splice(data.indexOf(e), 1);
-      return e
+      return e;
     }
   })[0];
+  item.destroyed = true;
+  data.splice(data.indexOf(item), 1);
   errorHandling(res, item);
 });
 

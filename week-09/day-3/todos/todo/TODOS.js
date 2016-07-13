@@ -2,6 +2,7 @@
 
 var addButton = document.querySelector('.add_task');
 var childList = [];
+var url = 'http://localhost:3000/todos/';
 
 function createTaskElements(e) {
   var task = document.createElement('div');
@@ -52,14 +53,14 @@ function displayContent() {
       createTaskElements(e);
     });
   };
-  xhr.open('GET', 'https://mysterious-dusk-8248.herokuapp.com/todos/');
+  xhr.open('GET', url);
   xhr.send();
 }
 
 function removeTask() {
   var xhr = new XMLHttpRequest();
   var deleteID = event.target.id;
-  var reqURL = 'https://mysterious-dusk-8248.herokuapp.com/todos/' + deleteID;
+  var reqURL = url + deleteID;
   xhr.open('DELETE', reqURL);
   xhr.setRequestHeader('content-type', 'application/json; charset=utf-8');
   xhr.onload = function() {
@@ -81,7 +82,7 @@ function checkUncheck() {
     'completed': setToThis,
   };
   var JSONReq = JSON.stringify(request);
-  var reqURL = 'https://mysterious-dusk-8248.herokuapp.com/todos/' + id;
+  var reqURL = url + id;
   xhr.open('PUT', reqURL);
   xhr.setRequestHeader('content-type', 'application/json; charset=utf-8');
   xhr.onload = function() {
@@ -94,7 +95,7 @@ function checkUncheck() {
 
 function addTask() {
   var xhr = new XMLHttpRequest();
-  xhr.open('POST', 'https://mysterious-dusk-8248.herokuapp.com/todos');
+  xhr.open('POST', url);
   var content = document.querySelector('#content');
   var sendThis = content.value;
   var newTask = JSON.stringify({ text: sendThis });
@@ -119,7 +120,7 @@ function editTask() {
     'completed': setToThis,
   };
   var JSONReq = JSON.stringify(request);
-  var reqURL = 'https://mysterious-dusk-8248.herokuapp.com/todos/' + id;
+  var reqURL = url + id;
   xhr.open('PUT', reqURL);
   xhr.setRequestHeader('content-type', 'application/json; charset=utf-8');
   xhr.send(JSONReq);
