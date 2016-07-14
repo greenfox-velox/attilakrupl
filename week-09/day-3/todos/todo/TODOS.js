@@ -44,24 +44,26 @@ function clearScreenContent() {
   myNode.innerHTML = '';
 }
 
+function clearInputField() {
+  var content = document.querySelector('#content');
+  document.querySelector('#content').value = '';
+}
+
 function displayContent() {
   var xhr = new XMLHttpRequest();
+  xhr.open('GET', url);
   xhr.onload = function() {
-    var all = JSON.parse(xhr.responseText);
     clearScreenContent();
-    all.forEach((e) => {
+    JSON.parse(xhr.responseText).forEach((e) => {
       createTaskElements(e);
     });
   };
-  xhr.open('GET', url);
   xhr.send();
 }
 
 function removeTask() {
   var xhr = new XMLHttpRequest();
-  var deleteID = event.target.id;
-  var reqURL = url + deleteID;
-  xhr.open('DELETE', reqURL);
+  xhr.open('DELETE', url + event.target.id);
   xhr.setRequestHeader('content-type', 'application/json; charset=utf-8');
   xhr.onload = function() {
     if (xhr.readyState === 4) {
@@ -73,68 +75,48 @@ function removeTask() {
 
 function checkUncheck() {
   var xhr = new XMLHttpRequest();
-  var id = event.target.id;
-  var readyOrNot = event.target.classList[1];
-  var setToThis = readyOrNot === 'checked' ? 0 : 1;
+  var setToThis = event.target.classList[1] === 'checked' ? 0 : 1;
   var text = document.querySelector('#t' + event.target.id).innerHTML;
-  var request = {
-    'text': text,
-    'completed': setToThis,
-  };
-  var JSONReq = JSON.stringify(request);
-  var reqURL = url + id;
-  xhr.open('PUT', reqURL);
+  var request = JSON.stringify({ 'text': text, 'completed': setToThis });
+  xhr.open('PUT', url + event.target.id);
   xhr.setRequestHeader('content-type', 'application/json; charset=utf-8');
   xhr.onload = function() {
     if (xhr.readyState === 4) {
       displayContent();
     }
   };
-  xhr.send(JSONReq);
-}
-
-function clear() {
-  var content = document.querySelector('#content');
-  document.querySelector('#content').value = '';
+  xhr.send(request);
 }
 
 function addTask() {
   var xhr = new XMLHttpRequest();
   xhr.open('POST', url);
-  var content = document.querySelector('#content');
-  var sendThis = content.value;
-  var newTask = JSON.stringify({ text: sendThis });
+  var request = JSON.stringify({ text: document.querySelector('#content').value });
   xhr.setRequestHeader('content-type', 'application/json; charset=utf-8');
   xhr.onload = function() {
     if (xhr.readyState === 4) {
       displayContent();
     }
   };
-  clear();
-  xhr.send(newTask);
+  clearInputField();
+  xhr.send(request);
 }
 
 function editTask() {
   var xhr = new XMLHttpRequest();
-  var id = event.target.id;
-  var readyOrNot = event.target.classList[1];
-  var setToThis = readyOrNot === 'checked' ? true : false;
+  var setToThis = event.target.classList[1] === 'checked' ? true : false;
   var text = document.querySelector('#t' + event.target.id).innerHTML;
   var changeTaskToThis = prompt('Enter the updated task!', text);
-  var request = {
-    'text': changeTaskToThis,
-    'completed': setToThis,
-  };
-  var JSONReq = JSON.stringify(request);
-  var reqURL = url + id;
-  xhr.open('PUT', reqURL);
+  var request = JSON.stringify({ 'text': changeTaskToThis, 'completed': setToThis });
+  xhr.open('PUT', url + event.target.id);
   xhr.setRequestHeader('content-type', 'application/json; charset=utf-8');
-  xhr.send(JSONReq);
+  xhr.send(request);
   xhr.onload = function() {
     if (xhr.readyState === 4) {
       displayContent();
     }
   };
 }
+
 displayContent();
 addButton.addEventListener('click', addTask);
