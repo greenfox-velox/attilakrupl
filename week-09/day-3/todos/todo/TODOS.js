@@ -93,6 +93,11 @@ function checkUncheck() {
   xhr.send(JSONReq);
 }
 
+function clear() {
+  var content = document.querySelector('#content');
+  document.querySelector('#content').value = '';
+}
+
 function addTask() {
   var xhr = new XMLHttpRequest();
   xhr.open('POST', url);
@@ -105,6 +110,7 @@ function addTask() {
       displayContent();
     }
   };
+  clear();
   xhr.send(newTask);
 }
 
