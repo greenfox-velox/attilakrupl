@@ -12,19 +12,19 @@ function getTodos(req, callback) {
   subFunctions.errorHandling(err);
   callback(rows);
 });
-}
+};
 function getTodoByID(req, callback) {
   con.query('SELECT * from todos WHERE id = ?', req.params.id, (err, rows) => {
   subFunctions.errorHandling(err);
   callback(rows);
 });
-}
+};
 function postTodo(req, callback) {
   con.query('INSERT INTO todos SET ?', subFunctions.setNewTodo(req.body.text), (err, rows) => {
   subFunctions.errorHandling(err);
   callback(rows);
 });
-}
+};
 function modifyTodo(req, callback) {
   let text = subFunctions.defineBody(req.body).text;
   let complete = subFunctions.checkOrUncheck(req.body);
@@ -34,7 +34,7 @@ function modifyTodo(req, callback) {
   subFunctions.errorHandling(err);
   callback(rows);
 });
-}
+};
 function deleteTodo(req, callback) {
   con.query('UPDATE todos SET destroyed = ? Where ID = ?', [1, req.params.id], (err, result) => {
     subFunctions.errorHandling(err);
