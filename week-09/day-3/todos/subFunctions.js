@@ -17,7 +17,6 @@ function setNewTodo(task) {
   return { completed : 0 , text:  task , destroyed : 0 }
 }
 
-
 module.exports.errorHandling = errorHandling;
 module.exports.defineBody = defineBody;
 module.exports.checkOrUncheck = checkOrUncheck;
