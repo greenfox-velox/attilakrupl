@@ -22,6 +22,7 @@ app.get('/todos/:id', (req, res) => {
 
 app.post('/todos/', (req, res) => {
   mysqlDB.postTodo(req, row => {
+    console.log(row);
     res.send(row);
   });
 });
