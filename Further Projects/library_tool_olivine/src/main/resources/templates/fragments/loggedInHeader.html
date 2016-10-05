@@ -1,0 +1,14 @@
+<header>
+    <div class="head">
+        <div class="title" th:text="${auth ? 'ENTERPRISE' : ''} + ' LIBRARY TOOL'">LIBRARY TOOL</div>
+        <div class="uj">
+            <div class="links" th:each = "link : ${links}">
+                <a th:text="${link[2]}" th:href="${link[0]}" th:attr="class=${link[1]}">text</a>
+
+            </div>
+            <form th:action="@{/logout}" method="post">
+                <input class="headerLogout" type="submit" value="logout"/>
+            </form>
+        </div>
+    </div>
+</header>

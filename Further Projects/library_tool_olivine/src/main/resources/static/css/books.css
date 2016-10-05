@@ -1,0 +1,11 @@
+.booksButton {
+    background-color: #1C3D50;
+    color: white;
+    text-decoration: none;
+}
+
+.borrowButton:disabled {
+    background: white;
+    border: gray;
+    color: gray;
+}

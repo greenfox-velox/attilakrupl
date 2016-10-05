@@ -1,0 +1,113 @@
+.flex-container {
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  background-color: black;
+  height: 600px;
+  width: 440px;
+  border: 1px solid black;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.blanket {
+  background-color: white;
+  height: 80px;
+  width: 440px;
+  border: 1px solid black;
+  position: fixed;
+  box-sizing: border-box;
+  justify-content: space-between;
+
+}
+
+.smallDiv {
+  height: 6.66%;
+  width: 10%;
+  box-sizing: border-box;
+}
+
+.shapeDiv {
+  border: 1px black solid;
+}
+
+.emptyShapeDiv {
+  /*border: 1px black solid;*/
+}
+
+.emptyDiv {
+  background-color: grey;
+}
+
+.redDiv {
+  background-color: red;
+}
+
+.blueDiv {
+  background-color: blue;
+}
+
+.yellowDiv {
+  background-color: yellow;
+}
+
+.greenDiv {
+    background-color: green;
+}
+
+.whiteDiv {
+    background-color: white;
+}
+
+.orangeDiv {
+    background-color: orange;
+}
+
+.aquamarineDiv {
+    background-color: aquamarine;
+}
+
+
+.details {
+  background-color: red;
+  width: 250px;
+  height: 600px;
+  border: 1px solid black;
+
+}
+
+.score {
+  background-color: purple;
+
+}
+
+.nextItem {
+  background-color: grey;
+}
+
+.score, .nextItem {
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+  margin-top: 50px;
+  border: 1px solid black;
+  text-align: center;
+
+}
+
+
+.tinyDiv {
+  height: 50%;
+  width: 25%;
+  box-sizing: border-box;
+}
+
+.displayNext {
+  display: flex;
+  flex-wrap: wrap;
+  height: 75px;
+  width: 150px;
+  margin: 0 auto;
+}
